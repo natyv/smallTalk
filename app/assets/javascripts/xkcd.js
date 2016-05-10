@@ -5,7 +5,7 @@ $( document ).ready(function() {
     var randomNumber = Math.floor((Math.random() * 1500) + 1);
 
     $.ajax({
-      url: "http://crossorigin.me/http://xkcd.com/"+ randomNumber + "/info.0.json",
+      url: "http://cors.io/?u=http://xkcd.com/"+ randomNumber + "/info.0.json",
       dataType: "json",
       method: 'GET'
 
