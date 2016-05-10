@@ -1,10 +1,9 @@
 $( document ).ready(function() {
 //numbersfact
   $('#numberFacts').on('click', function () {
-    var randomNumber = Math.floor((Math.random() * 1500) + 1);
 
     $.ajax({
-      url: "http://numbersapi.com/" + randomNumber + "?json",
+      url: "http://numbersapi.com/random/trivia/?json",
       dataType: "json",
       method: 'GET'
 
