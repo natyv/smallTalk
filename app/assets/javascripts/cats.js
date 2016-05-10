@@ -7,8 +7,9 @@ $( document ).ready(function() {
       method: 'GET'
 
     }).done(function(response) {
+      $('#showContent').empty();
       console.log(response.facts[0])
-      $('#show').html(response.facts[0]);
+      $('#showContent').html(response.facts[0]);
     });
   });
 });

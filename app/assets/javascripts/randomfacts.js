@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 //randomfacts
-  $('#random').on('click', function () {
-    $('#show').empty();
+  $('#randomFacts').on('click', function () {
+    $('#showContent').empty();
     var randomNumber = Math.floor((Math.random() * 1500) + 1);
 
     $.ajax({
@@ -11,7 +11,7 @@ $( document ).ready(function() {
 
     }).done(function(response) {
       console.log(response[0].nid)
-      $('#show').html(response[0].nid);
+      $('#showContent').html(response[0].nid);
     });
   });
 });

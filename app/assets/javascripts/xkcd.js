@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 //xkcd
   $('#xkcd').on('click', function () {
-    $('#show').empty();
+    $('#showContent').empty();
     var randomNumber = Math.floor((Math.random() * 1500) + 1);
 
     $.ajax({
@@ -12,7 +12,7 @@ $( document ).ready(function() {
     }).done(function(response) {
       console.log(response.img)
       var $img = $('<img>').attr('src', response.img);
-      $('#show').append($img);
+      $('#showContent').append($img);
     });
   });
 });
