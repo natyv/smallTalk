@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
+//= require cats
+//= require giphy
+//= require news
+//= require numberfacts
+//= require randomfacts
+//= require xkcd
