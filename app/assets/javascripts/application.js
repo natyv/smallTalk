@@ -15,15 +15,12 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
-<<<<<<< HEAD
 //= require cats
 //= require giphy
 //= require news
 //= require numberfacts
 //= require randomfacts
 //= require xkcd
-=======
 //= require owl.carousel.js
 //= require owl.carousel.min.js
 //= require materialize.min.js
->>>>>>> 8895f741c6ed13edee494a0eb0cf1270a377f454
