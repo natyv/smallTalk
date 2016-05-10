@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 //news
   $('#news').on('click', function () {
-    $('#show').empty();
+    $('#showContent').empty();
     var pageSize = 1
 
     $.ajax({
@@ -32,7 +32,7 @@ $( document ).ready(function() {
           console.log(article[i]);
           var $para = $('<p>').html(article[i].webTitle);
           var $link = $('<a>').attr('href', article[i].webUrl).html('Link To Article');
-          $('#show').append($para).append($link);
+          $('#showContent').append($para).append($link);
         }
       }
 
@@ -46,8 +46,8 @@ $( document ).ready(function() {
           index++;
         } else {
           var $error = $('<p>').html('Sorry No More News For Now');
-          $('#show').empty()
-          $('#show').append($error);
+          $('#showContent').empty()
+          $('#showContent').append($error);
         }
       });
     });
