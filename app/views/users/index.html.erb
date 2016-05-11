@@ -103,7 +103,7 @@
   <div class="row categories">
     <div id="randomFacts" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
     <div id="trivia" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div id="giphy" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red"></a></div>
+    <div id="giphy" class="col s4 m4 l4 cens ter-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red"></a></div>
     <div class="col s4 center-align categories-text">Random</div>
     <div class="col s4 center-align categories-text">Trivia</div>
     <div class="col s4 center-align categories-text">Giphy</div>
@@ -159,6 +159,25 @@
     <div class="col s6  m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
   </div>
 
+
+
+      <div class="owl-carousel red center-align owl-fixed">
+          <div class="item"><h4>1</h4></div>
+          <div class="item"><h4>2</h4></div>
+          <div class="item"><h4>3</h4></div>
+          <div class="item"><h4>4</h4></div>
+          <div class="item"><h4>5</h4></div>
+          <div class="item"><h4>6</h4></div>
+          <div class="item"><h4>7</h4></div>
+          <div class="item"><h4>8</h4></div>
+          <div class="item"><h4>9</h4></div>
+          <div class="item"><h4>10</h4></div>
+          <div class="item"><h4>11</h4></div>
+          <div class="item"><h4>12</h4></div>
+      </div>
+
+
+
 </div>
 <!-- Scripts -->
 <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -166,7 +185,9 @@
 <!-- Custom Scripts -->
 <script>
   $(document).ready(function(){
-
+    $(document).ready(function(){
+          $(".owl-carousel").owlCarousel();
+      });
 
   $( "#social-media-overlay-btn" ).click(function() {
   $( "#social-media-overlay" ).fadeToggle( 250, "linear" );
