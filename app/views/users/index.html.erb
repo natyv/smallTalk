@@ -3,24 +3,6 @@
 <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo center">SmallTalk</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <!-- Desktop Navigation -->
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
-        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
-        <button data-target="modal1" class="btn modal-trigger">Modal</button>
-      </ul>
-
-      <!-- Mobile Navigation -->
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-
-      </ul>
     </div>
   </nav>
 
@@ -31,7 +13,7 @@
 
 
 <!-- Modal Structure -->
-<div id="modal1" class="modal bottom-sheet modal-rotate" style="top: -100%;">
+<div id="modal1" class="modal bottom-sheet modal-position" style="top: -100%;">
   <div class="modal-content">
     <div class="row">
     <form class="col s12">
@@ -49,7 +31,7 @@
       </div>
 
       <!-- Login Button -->
-      <div class="col s4 offset-s4">
+      <div class="col s4 offset-s4 center-align">
         <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Login</a>
       </div>
       <!-- SignUp Button -->
@@ -154,54 +136,16 @@
       </div>
   </div>
 
+
+
    <!-- Results Container Like + Next Navigation -->
   <div class="row">
-    <div class="col s6 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
-    <div class="col s6 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+    <div class="col s6  m3 offset-m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
+    <div class="col s6  m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
   </div>
 
 
 
-  <!-- Results Container Carousel -->
-  <div class="owl-carousel red center-align owl-fixed">
-    <div class="item">
-      <div id="cats" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-      <div class="col s4 center-align categories-text">Cats</div>
-    </div>
-    <div class="item">
-      <div id="cats" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-      <div class="col s4 center-align categories-text">Cats</div>
-    </div>
-    <div class="item">
-      <div id="cats" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-      <div class="col s4 center-align categories-text">Cats</div>
-    </div>
-    <div class="item">
-      <div id="cats" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-      <div class="col s4 center-align categories-text">Cats</div>
-    </div>
-    <div class="item">
-      <div id="cats" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-      <div class="col s4 center-align categories-text">Cats</div>
-    </div>
-    <div class="item"><h4>2</h4></div>
-    <div class="item"><h4>3</h4></div>
-    <div class="item"><h4>4</h4></div>
-    <div class="item"><h4>5</h4></div>
-    <div class="item"><h4>6</h4></div>
-    <div class="item"><h4>7</h4></div>
-    <div class="item"><h4>8</h4></div>
-    <div class="item"><h4>9</h4></div>
-    <div class="item"><h4>10</h4></div>
-    <div class="item"><h4>11</h4></div>
-    <div class="item"><h4>12</h4></div>
-  </div>
-
-
-
-
-
-</div>
 
 <!-- Scripts -->
 <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -209,12 +153,13 @@
 <!-- Custom Scripts -->
 <script>
   $(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-  });
+
+
+
   $( "#social-media-overlay-btn" ).click(function() {
   $( "#social-media-overlay" ).fadeToggle( 250, "linear" );
   });
-  $(document).ready(function(){
+
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
   $('.modal-trigger').leanModal();
   });
