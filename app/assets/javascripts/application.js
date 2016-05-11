@@ -22,6 +22,7 @@
 //= require randomfacts
 //= require trivia
 //= require smalltalk
+//= require yesno
 //= require owl.carousel.js
 //= require owl.carousel.min.js
 //= require materialize.min.js
