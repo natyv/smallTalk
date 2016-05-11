@@ -2,7 +2,6 @@ $( document ).ready(function() {
 //news
   $('#news').on('click', function () {
     $('#showContent').empty();
-    var pageSize = 1
 
     $.ajax({
       url: "http://content.guardianapis.com/search?page-size=50&api-key=bcc713f7-cd86-40ea-9437-1510a468cd34",
@@ -43,24 +42,16 @@ $( document ).ready(function() {
 
       var $contentPara = $('<p>');
 
-      var $button = $('<button>Next</button>').attr('id','nextBtn');
-
       $('#showContent').append($contentPara);
       $('#category').html('News');
-      $contentPara.append($button)
 
       var index = 0
-      $('#nextBtn').on('click', function() {
+      $('body').on('click','#category-next', function() {
         if (index < 11) {
           $('.title').empty();
           $('.link').empty();
           loopArticles(articleCollection[index]);
-          $contentPara.append($button)
           index++;
-        } else {
-          var $error = $('<p>').html('Sorry No More News For Now');
-          $('#showContent').empty()
-          $('#showContent').append($error);
         }
       });
     });

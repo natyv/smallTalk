@@ -48,26 +48,18 @@ $( document ).ready(function() {
 
         var $contentPara = $('<p>');
 
-        var $button = $('<button>Next</button>').attr('id','nextBtn');
-
         $('#showContent').append($contentPara);
         $('#category').html('Reddit');
-        $contentPara.append($button)
 
         var index = 0
-        $('#nextBtn').on('click', function() {
+        $('body').on('click','#category-next', function() {
           if (index < 5) {
             $('.title').empty();
             $('.link').empty();
             $('.score').empty();
 
             loopReddit(redditCollection[index]);
-            $contentPara.append($button)
             index++;
-          } else {
-            var $error = $('<p>').html('Sorry No More Reddit');
-            $('#showContent').empty()
-            $('#showContent').append($error);
           }
         });
       });
