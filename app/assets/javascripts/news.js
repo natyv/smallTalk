@@ -30,19 +30,32 @@ $( document ).ready(function() {
       var loopArticles = function(article) {
         for (var i = 0; i < article.length; i++ ) {
           console.log(article[i]);
-          var $para = $('<p>').html(article[i].webTitle);
-          var $link = $('<a>').attr('href', article[i].webUrl).html('Link To Article');
-          $('#showContent').append($para).append($link);
+          var $newsTitle = $('<p>').html(article[i].webTitle).attr('class','title');
+          var $articleLink = $('<a>').attr({
+            href:article[i].webUrl,
+            class: 'link'
+          }).html('Link To Article');
+          $('#showContent').append($newsTitle).append($articleLink);
         }
       }
 
       loopArticles(firstThree);
 
+      var $contentPara = $('<p>');
+
+      var $button = $('<button>Next</button>').attr('id','nextBtn');
+
+      $('#showContent').append($contentPara);
+
+      $contentPara.append($button)
+
       var index = 0
-      $('#next').on('click', function() {
+      $('#nextBtn').on('click', function() {
         if (index < 11) {
-          $('#show').empty()
+          $('.title').empty();
+          $('.link').empty();
           loopArticles(articleCollection[index]);
+          $contentPara.append($button)
           index++;
         } else {
           var $error = $('<p>').html('Sorry No More News For Now');

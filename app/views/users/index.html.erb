@@ -24,8 +24,6 @@
     </div>
   </nav>
 
-
-
   <!-- Modal Button -->
   <button data-target="modal1" class="btn modal-trigger modal-fixed-nav"><i class="fa fa-user" aria-hidden="true"></i></button>
 
@@ -91,46 +89,43 @@
 <div class="categories-container" style="display: block;" id="categories-container" onload="Materialize.showStaggeredList('#categories-container')">
 
   <div class="row categories">
-    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div id="cats" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
+    <div id="news" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div id="numberFacts" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
     <div class="col s4 center-align categories-text">Cats</div>
-    <div class="col s4 center-align categories-text">Cats</div>
-    <div class="col s4 center-align categories-text">Cats</div>
+    <div class="col s4 center-align categories-text">News</div>
+    <div class="col s4 center-align categories-text">Numbers</div>
+    </div>
   </div>
 
   <div class="row categories">
-    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red"></a></div>
-    <div class="col s4 center-align categories-text">Cats</div>
-    <div class="col s4 center-align categories-text">Cats</div>
-    <div class="col s4 center-align categories-text">Cats</div>
-  </div>
+    <div id="randomFacts" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
+    <div id="trivia" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div id="giphy" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red"></a></div>
+    <div class="col s4 center-align categories-text">Random</div>
+    <div class="col s4 center-align categories-text">Trivia</div>
+    <div class="col s4 center-align categories-text">Giphy</div>
 
   <div class="row categories">
-    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
+    <div id="smalltalks" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
     <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div id="yesno" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div class="col s4 center-align categories-text">SmallTalk</div>
     <div class="col s4 center-align categories-text">Cats</div>
-    <div class="col s4 center-align categories-text">Cats</div>
-    <div class="col s4 center-align categories-text">Cats</div>
+    <div class="col s4 center-align categories-text">Yes or No</div>
   </div>
-
 </div>
 
 
 <div class="results-container">
-
   <div class="row results">
     <p class="center-align results-title-cats"> Cats </p>
       <div class="row">
         <div class="col s12 m7">
           <div class="card">
             <div class="card-content">
-              <p onload="myFunction()">I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.
-              </p>
+              <div id="showContent">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+              </div>
             </div>
           <div class="card-action card-btm">
             <div class="fixed-action-btn vertical click-to-toggle social-media-btn" id="social-media-overlay-btn">
