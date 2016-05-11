@@ -756,7 +756,7 @@ if ($) {
 
       // Define Bottom Sheet animation
       if ($modal.hasClass('bottom-sheet')) {
-        $modal.velocity({bottom: "0", opacity: 1}, {
+        $modal.velocity({top: "0", opacity: 1}, {
           duration: options.in_duration,
           queue: false,
           ease: "easeOutCubic",
@@ -815,7 +815,7 @@ if ($) {
 
       // Define Bottom Sheet animation
       if ($modal.hasClass('bottom-sheet')) {
-        $modal.velocity({bottom: "-100%", opacity: 0}, {
+        $modal.velocity({top: "-100%", opacity: 0}, {
           duration: options.out_duration,
           queue: false,
           ease: "easeOutCubic",
