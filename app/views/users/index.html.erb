@@ -12,23 +12,6 @@
           <button id="logout" style="float:right">Logout</button>
         </form>
       <% end %>
-      <!-- Desktop Navigation -->
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
-        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
-        <button data-target="modal1" class="btn modal-trigger">Modal</button>
-      </ul>
-
-      <!-- Mobile Navigation -->
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-
-      </ul>
     </div>
   </nav>
 
@@ -39,7 +22,7 @@
 
 
 <!-- Modal Structure -->
-<div id="modal1" class="modal bottom-sheet modal-rotate" style="top: -100%;">
+<div id="modal1" class="modal bottom-sheet modal-position" style="top: -100%;">
   <div class="modal-content">
     <div class="row">
     <form class="col s12">
@@ -59,11 +42,13 @@
           </div>
         </div>
 
+
         <!-- Login Button -->
-        <div class="col s4 offset-s4">
-          <button id="login"><a class="waves-effect waves-light btn"><i class="material-icons left"></i>Login</a></button>
+        <div class="col s4 offset-s4 center-align">
+          <a id="login" class="waves-effect waves-light btn"><i class="material-icons left"></i>Login</a>
         </div>
       </form>
+
       <!-- SignUp Button -->
       <div class="col s4 offset-s4 center-align">
         <a class="waves-effect waves-light"><i class="material-icons left"></i>Sign-Up</a>
@@ -78,8 +63,8 @@
 
 
 
-
-<div class="preloader-wrapper big active">
+<!-- Preloader Test -->
+<!-- <div class="preloader-wrapper big active">
    <div class="spinner-layer spinner-blue-only">
      <div class="circle-clipper left">
        <div class="circle"></div>
@@ -89,51 +74,61 @@
        <div class="circle"></div>
      </div>
    </div>
- </div>
+ </div> -->
 
 
 
 
-
+<!-- Social Media Overlay -->
 <div class="social-media-overlay" id="social-media-overlay" style="display: none;">
 </div>
 
+
+<!-- Categories Container -->
 <div class="categories-container" style="display: block;" id="categories-container" onload="Materialize.showStaggeredList('#categories-container')">
 
+
+  <!-- Categories Container 1st Row -->
   <div class="row categories">
-    <div id="cats" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-    <div id="news" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div id="numberFacts" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div id="cats" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
+    <div id="news" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div id="numberFacts" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
     <div class="col s4 center-align categories-text">Cats</div>
     <div class="col s4 center-align categories-text">News</div>
     <div class="col s4 center-align categories-text">Numbers</div>
   </div>
 
+
+  <!-- Categories Container 2nd Row -->
   <div class="row categories">
-    <div id="randomFacts" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-    <div id="trivia" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div id="giphy" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red"></a></div>
+    <div id="randomFacts" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
+    <div id="trivia" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div id="giphy" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red"></a></div>
     <div class="col s4 center-align categories-text">Random</div>
     <div class="col s4 center-align categories-text">Trivia</div>
     <div class="col s4 center-align categories-text">Giphy</div>
   </div>
 
+
+  <!-- Categories Container 3rd Row -->
   <div class="row categories">
-    <div id="smalltalks" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-    <div id="reddit" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div id="yesno" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+
+    <div id="smalltalks" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
+    <div id="reddit" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div id="yesno" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+
     <div class="col s4 center-align categories-text">SmallTalk</div>
     <div class="col s4 center-align categories-text">Reddit</div>
     <div class="col s4 center-align categories-text">Yes or No</div>
   </div>
 </div>
 
-
-<div class="results-container">
+  <!-- Results Container -->
+<div class="results-container" style="display:none;">
   <div class="row results">
     <p class="center-align results-title-cats"> Cats </p>
       <div class="row">
-        <div class="col s12 m7">
+        <div class="col s12 offset-m2 m8 offset-l3 l6 ">
           <div class="card">
             <div class="card-content">
               <div id="showContent">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
@@ -157,44 +152,35 @@
   </div>
 
 
+
+   <!-- Results Container Like + Next Navigation -->
   <div class="row">
-    <div class="col s6 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
-    <div class="col s6 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
-  </div>
-
-
-
-
-  <div class="owl-carousel red center-align owl-fixed">
-    <div class="item"><h4>1</h4></div>
-    <div class="item"><h4>2</h4></div>
-    <div class="item"><h4>3</h4></div>
-    <div class="item"><h4>4</h4></div>
-    <div class="item"><h4>5</h4></div>
-    <div class="item"><h4>6</h4></div>
-    <div class="item"><h4>7</h4></div>
-    <div class="item"><h4>8</h4></div>
-    <div class="item"><h4>9</h4></div>
-    <div class="item"><h4>10</h4></div>
-    <div class="item"><h4>11</h4></div>
-    <div class="item"><h4>12</h4></div>
+    <div class="col s6  m3 offset-m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
+    <div class="col s6  m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
   </div>
 
 </div>
-
-<!--Import jQuery before materialize.js-->
+<!-- Scripts -->
 <script type="text/javascript" src="js/materialize.min.js"></script>
 
+<!-- Custom Scripts -->
 <script>
   $(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-  });
+
+
   $( "#social-media-overlay-btn" ).click(function() {
   $( "#social-media-overlay" ).fadeToggle( 250, "linear" );
   });
-  $(document).ready(function(){
+
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
   $('.modal-trigger').leanModal();
   });
   $(".button-collapse").sideNav();
+  ///// Buttons Categories
+  $(".categories-click").click(function(){
+    $("#categories-container").hide();
+  });
+  $(".categories-click").click(function(){
+    $(".results-container").show();
+  });
 </script>
