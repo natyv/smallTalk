@@ -2,7 +2,6 @@ $( document ).ready(function() {
 //news
   $('#news').on('click', function () {
     $('#showContent').empty();
-    var pageSize = 1
 
     $.ajax({
       url: "http://content.guardianapis.com/search?page-size=50&api-key=bcc713f7-cd86-40ea-9437-1510a468cd34",
@@ -53,10 +52,6 @@ $( document ).ready(function() {
           $('.link').empty();
           loopArticles(articleCollection[index]);
           index++;
-        } else {
-          var $error = $('<p>').html('Sorry No More News For Now');
-          $('#showContent').empty()
-          $('#showContent').append($error);
         }
       });
     });

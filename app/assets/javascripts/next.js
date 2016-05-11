@@ -3,7 +3,7 @@ $( document ).ready(function() {
   $('body').on('click','#category-next', function() {
 
     if ($('#category').html() === 'Cats') {
-
+        $('#showContent').empty();
         $.ajax({
           url: 'http://cors.io/?u=http://catfacts-api.appspot.com/api/facts',
           dataType: "json",
@@ -17,6 +17,7 @@ $( document ).ready(function() {
         });
 
     } else if ($('#category').html() === 'Number Facts') {
+        $('#showContent').empty();
 
         $.ajax({
           url: "http://numbersapi.com/random/trivia/?json",
@@ -30,7 +31,7 @@ $( document ).ready(function() {
         });
 
     } else if ($('#category').html() === 'Random Facts') {
-
+        $('#showContent').empty();
         var randomNumber = Math.floor((Math.random() * 1500) + 1);
 
         $.ajax({
@@ -45,15 +46,14 @@ $( document ).ready(function() {
         });
 
     } else if ($('#category').html() === 'Trivia') {
-
+        $('#showContent').empty();
         $.ajax({
           url: 'http://jservice.io/api/random',
           dataType: "json",
           method: 'GET'
 
         }).done(function(response) {
-          console.log(response)
-          $('#showContent').empty();
+
           $('#showContent').html(response[0].question);
 
           var $contentPara = $('<p>');
@@ -112,6 +112,7 @@ $( document ).ready(function() {
         });
 
     } else if ($('#category').html() === 'Yes/No') {
+          $('#showContent').empty();
 
           $.ajax({
             url: 'http://yesno.wtf/api/',
@@ -119,7 +120,6 @@ $( document ).ready(function() {
             method: 'GET'
 
           }).done(function(response) {
-            $('#showContent').empty();
             console.log(response);
             $('#showContent').html(response.answer);
 
@@ -127,10 +127,9 @@ $( document ).ready(function() {
             $('#showContent').append($img);
             $('#category').html('Yes/No');
           });
+
     }
 
-
   });
-
 
 });

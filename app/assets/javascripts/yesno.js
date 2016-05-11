@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 //cats api
   $('#yesno').on('click', function () {
-    console.log(this)
+    $('#showContent').empty();
     $.ajax({
       url: 'http://yesno.wtf/api/',
       dataType: "json",

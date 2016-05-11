@@ -60,10 +60,6 @@ $( document ).ready(function() {
 
             loopReddit(redditCollection[index]);
             index++;
-          } else {
-            var $error = $('<p>').html('Sorry No More Reddit');
-            $('#showContent').empty()
-            $('#showContent').append($error);
           }
         });
       });
