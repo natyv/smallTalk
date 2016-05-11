@@ -20,7 +20,8 @@
 //= require news
 //= require numberfacts
 //= require randomfacts
-//= require xkcd
+//= require trivia
+//= require smalltalk
 //= require owl.carousel.js
 //= require owl.carousel.min.js
 //= require materialize.min.js
