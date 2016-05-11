@@ -13,6 +13,22 @@ $( document ).ready(function() {
       $('#showContent').empty();
       $('#showContent').html(response[0].question);
 
+      var $contentPara = $('<p>');
+
+      var $button = $('<button>Answer</button>').attr('id','answerBtn');
+
+      var $ansContent = $('<p>').attr('id','answerPara')
+
+      $contentPara.append($button);
+      $contentPara.append($ansContent);
+      $('#showContent').append($contentPara);
+
+      $('#answerBtn').on('click',function() {
+        var $answer = $('<p>').html(response[0].answer);
+        $('#answerPara').html($answer);
+
+      });
+
     });
   });
 });
