@@ -1,0 +1,13 @@
+<h2>Sign Up</h2>
+
+<form action="/signup" method = "post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <label for="email">email</label>
+  <input type="text" name = 'email'>
+
+  <label for="password">password</label>
+  <input type="password" name = 'password'>
+
+  <button>Sign Up</button>
+</form>
