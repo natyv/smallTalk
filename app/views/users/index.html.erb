@@ -1,39 +1,111 @@
-<!--Let browser know website is optimized for mobile-->
 
-
+<!--  Navigations -->
 <nav>
-  <div class="nav-wrapper">
-    <a href="#!" class="brand-logo center">Logo</a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-      <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-      <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
-      <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
-    </ul>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center">SmallTalk</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <!-- Desktop Navigation -->
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+        <button data-target="modal1" class="btn modal-trigger">Modal</button>
+      </ul>
+
+      <!-- Mobile Navigation -->
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <!-- Modal Button -->
+  <button data-target="modal1" class="btn modal-trigger modal-fixed-nav"><i class="fa fa-user" aria-hidden="true"></i></button>
+
+
+
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal bottom-sheet modal-rotate" style="top: -100%;">
+  <div class="modal-content">
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Username</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">vpn_key</i>
+          <input id="icon_telephone" type="password" class="validate">
+          <label for="icon_telephone">Password</label>
+        </div>
+      </div>
+
+      <!-- Login Button -->
+      <div class="col s4 offset-s4">
+        <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Login</a>
+      </div>
+      <!-- SignUp Button -->
+      <div class="col s4 offset-s4 center-align">
+        <a class="waves-effect waves-light"><i class="material-icons left"></i>Sign-Up</a>
+      </div>
+    </form>
   </div>
-</nav>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+
+
+<div class="preloader-wrapper big active">
+   <div class="spinner-layer spinner-blue-only">
+     <div class="circle-clipper left">
+       <div class="circle"></div>
+     </div><div class="gap-patch">
+       <div class="circle"></div>
+     </div><div class="circle-clipper right">
+       <div class="circle"></div>
+     </div>
+   </div>
+ </div>
+
+
+
+
 
 <div class="social-media-overlay" id="social-media-overlay" style="display: none;">
 </div>
 
-<div class="categories-container" style="display: block;">
+<div class="categories-container" style="display: block;" id="categories-container" onload="Materialize.showStaggeredList('#categories-container')">
 
   <div class="row categories">
-    <div id="cats" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-    <div id="news" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div id="numberFacts" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
+    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
     <div class="col s4 center-align categories-text">Cats</div>
-    <div class="col s4 center-align categories-text">News</div>
-    <div class="col s4 center-align categories-text">Numbers</div>
+    <div class="col s4 center-align categories-text">Cats</div>
+    <div class="col s4 center-align categories-text">Cats</div>
   </div>
 
   <div class="row categories">
-    <div id="randomFacts" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-    <div id="xkcd" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div id="giphy" class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red"></a></div>
-    <div class="col s4 center-align categories-text">Random</div>
-    <div class="col s4 center-align categories-text">XKCD</div>
-    <div class="col s4 center-align categories-text">Giphy</div>
+    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
+    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div class="col s4 m4 l4 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red"></a></div>
+    <div class="col s4 center-align categories-text">Cats</div>
+    <div class="col s4 center-align categories-text">Cats</div>
+    <div class="col s4 center-align categories-text">Cats</div>
   </div>
 
   <div class="row categories">
@@ -56,14 +128,14 @@
         <div class="col s12 m7">
           <div class="card">
             <div class="card-content">
-              <p id="showContent">I am a very simple card. I am good at containing small bits of information.
+              <p onload="myFunction()">I am a very simple card. I am good at containing small bits of information.
                   I am convenient because I require little markup to use effectively.
               </p>
             </div>
           <div class="card-action card-btm">
             <div class="fixed-action-btn vertical click-to-toggle social-media-btn" id="social-media-overlay-btn">
               <a class="social-media-btn-inner btn-floating btn-large red" style="width: 50px; height: 50px;">
-                    <i class="material-icons" >menu</i>
+                    <i class="material-icons">menu</i>
               </a>
               <ul>
                 <li><a class="btn-floating blue darken-3"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -113,4 +185,9 @@
   $( "#social-media-overlay-btn" ).click(function() {
   $( "#social-media-overlay" ).fadeToggle( 250, "linear" );
   });
+  $(document).ready(function(){
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal-trigger').leanModal();
+  });
+  $(".button-collapse").sideNav();
 </script>

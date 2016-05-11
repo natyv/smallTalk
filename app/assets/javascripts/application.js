@@ -23,4 +23,4 @@
 //= require xkcd
 //= require owl.carousel.js
 //= require owl.carousel.min.js
-//= require materialize.min.js
+//= require materialize
