@@ -46,7 +46,7 @@ $( document ).ready(function() {
       var $button = $('<button>Next</button>').attr('id','nextBtn');
 
       $('#showContent').append($contentPara);
-
+      $('#category').html('News');
       $contentPara.append($button)
 
       var index = 0

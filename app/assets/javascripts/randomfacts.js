@@ -12,6 +12,7 @@ $( document ).ready(function() {
     }).done(function(response) {
       console.log(response[0].nid)
       $('#showContent').html(response[0].nid);
+      $('#category').html('Random Facts');
     });
   });
 });

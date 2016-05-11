@@ -10,6 +10,7 @@ $( document ).ready(function() {
       $('#showContent').empty();
       console.log(response.facts[0])
       $('#showContent').html(response.facts[0]);
+      $('#category').html('Cats');
     });
   });
 });

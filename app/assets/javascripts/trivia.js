@@ -22,6 +22,7 @@ $( document ).ready(function() {
       $contentPara.append($button);
       $contentPara.append($ansContent);
       $('#showContent').append($contentPara);
+      $('#category').html('Trivia');
 
       $('#answerBtn').on('click',function() {
         var $answer = $('<p>').html(response[0].answer);

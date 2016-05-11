@@ -12,6 +12,7 @@ $( document ).ready(function() {
       console.log(response.data.image_original_url)
       var $img = $('<img>').attr('src', response.data.image_original_url);
       $('#showContent').append($img);
+      $('#category').html('Giphy');
     });
   });
 });

@@ -14,7 +14,7 @@ $( document ).ready(function() {
 
       var $img = $('<img>').attr('src', response.image);
       $('#showContent').append($img);
-
+      $('#category').html('Yes/No');
     });
   });
 });
