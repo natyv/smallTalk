@@ -127,7 +127,6 @@ $( document ).ready(function() {
             $('#showContent').append($img);
             $('#category').html('Yes/No');
           });
-
     }
 
   });
