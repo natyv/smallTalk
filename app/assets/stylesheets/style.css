@@ -19,8 +19,9 @@
 
 
 .categories{
-  width: 400px;
-  margin-bottom: 70px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 8%;
 }
 
 .categories-text{
@@ -30,7 +31,7 @@
 }
 
 .categories-container{
-  margin-top: 200px;
+  margin-top: 45px;
 }
 
 .categories-image{
