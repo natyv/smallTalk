@@ -26,17 +26,15 @@ $( document ).ready(function() {
         var loopReddit = function(article) {
           for (var i = 0; i < article.length; i++ ) {
 
-            var $redditTitle = $('<p>').html(article[i].data.title).attr('class','titleReddit');
-
-            // var $redditScore =
-            //  $('<p>').html('Score ' + article[i].data.score).attr('class','score');
+            var $redditTitle = $('<p>')
 
             var $articleLink = $('<a>').attr({
                 href:article[i].data.url,
                 class: 'linkReddit'
-              }).html('Link');
+              }).html(article[i].data.title);
+              $redditTitle.append($articleLink)
 
-            $('#showContent').append($redditTitle).append($articleLink);
+            $('#showContent').append($redditTitle).append('<br>');
           }
         }
 

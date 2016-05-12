@@ -9,6 +9,7 @@ class FavouritesController < ApplicationController
     fav = Favourite.new
     fav.content = params[:content]
     fav.user_id = params[:user_id]
+    fav.category = params[:category]
     fav.save
     render json: fav.to_json
   end
