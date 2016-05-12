@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 //news
-  $('#news').on('click', function () {
+  $('.news').on('click', function () {
     $('#showContent').empty();
 
     $.ajax({

@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 //numbersfact
-  $('#numberFacts').on('click', function () {
+  $('.numberFacts').on('click', function () {
     $('#showContent').empty();
 
     $.ajax({

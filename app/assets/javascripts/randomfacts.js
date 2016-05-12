@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 //randomfacts
-  $('#randomFacts').on('click', function () {
+  $('.randomFacts').on('click', function () {
     $('#showContent').empty();
     var randomNumber = Math.floor((Math.random() * 1500) + 1);
 

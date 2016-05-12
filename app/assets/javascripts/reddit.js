@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-    $('#reddit').on('click', function () {
+    $('.reddit').on('click', function () {
       $('#showContent').empty()
 
       $.ajax({

@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-//xkcd
-  $('#trivia').on('click', function () {
+
+  $('.trivia').on('click', function () {
     $('#showContent').empty();
 
     $.ajax({

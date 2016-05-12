@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-//cats api
-  $('#yesno').on('click', function () {
+
+  $('.yesno').on('click', function () {
     $('#showContent').empty();
     $.ajax({
       url: 'http://yesno.wtf/api/',

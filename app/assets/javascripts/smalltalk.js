@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-  $('#smalltalks').on('click', function () {
+  $('.smalltalks').on('click', function () {
     $('#showContent').empty();
 
     $.ajax({

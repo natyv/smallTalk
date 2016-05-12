@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 //giphy
-  $('#giphy').on('click', function () {
+  $('.giphy').on('click', function () {
     $('#showContent').empty();
 
     $.ajax({
