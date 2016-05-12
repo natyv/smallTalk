@@ -39,20 +39,17 @@
 
       <!-- if logged in - SHOW -->
       <% if !session[:user].nil? %>
-      <ul>
-        <li><button class="nav-signout"></li>
 
-        <li><p class="center-align">Signed in as: <span style="font-weight: bold;"> <%= session[:user]["email"] %></span></p></li>
+
+        <p class="center-align">Signed in as: <span style="font-weight: bold;"> <%= session[:user]["email"] %></span></p>
         <p style="display:none" id="user_id"><%=session[:user]["id"]%></p>
         <form action="/signout" method ="post">
           <input type="hidden" value="delete" name="_method">
             <!-- <button id="logout">Logout</button></li> -->
-            <a id="logout" class="waves-effect waves-light btn blue accent-4 s6 col offset-s3"><p><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</p></a>
-            <a href="/favourites" id="show-favourites" class="waves-effect waves-light btn blue accent-4 s6 col offset-s3"><p><i class="fa fa-heart" aria-hidden="true"> </i>Favourites</p></a>
-
-
+            <a id="logout" class="waves-effect waves-light btn blue accent-4 s6 col offset-s3" style="height: 68px; margin-bottom: 13px;"><p><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</p></a>
+            <a href="/favourites" id="show-favourites" style="height: 68px; margin-bottom: 13px;" class="waves-effect waves-light btn blue accent-4 s6 col offset-s3"><p><i class="fa fa-heart" aria-hidden="true"></i> Favourites</p></a>
         </form>
-      <button>
+
       <% else %>
       <!-- if NOT logged in - SHOW -->
 

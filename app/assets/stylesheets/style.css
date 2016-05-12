@@ -1,3 +1,19 @@
+
+#logout{
+  margin-top: 0;
+  text-align: center;
+}
+
+#show-favourites{
+  margin-top: 0;
+  text-align: center;
+}
+
+#logout > p, #show-favourites > p{
+  text-align: center;
+}
+
+
 nav{
   position: fixed;
   top:0;
