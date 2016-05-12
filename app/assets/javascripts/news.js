@@ -46,7 +46,7 @@ $( document ).ready(function() {
       $('#category').html('News');
 
       var index = 0
-      $('body').on('click','#category-next', function() {
+      $('#category-next').on('click', function() {
 
         if (index < 11 && $('#category').html() === 'News') {
 
