@@ -4,6 +4,40 @@ nav{
   z-index: 10000000;
 }
 
+.owl-prev{
+  font-size: 10px;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  position: fixed;
+  bottom: 110px;
+  left: 75px;
+  border-radius: 30px;
+
+  color: red;
+  font-weight: 200;
+  padding: 8px 0 0 0;
+  border: 1px solid red;
+}
+
+.owl-next{
+  font-size: 10px;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  position: fixed;
+  bottom: 110px;
+  right: 75px;
+  border-radius: 30px;
+
+  color: red;
+  font-weight: 200;
+  padding: 8px 0 0 0;
+  border: 0.8px solid red;
+
+
+}
+
 .carousel-text{
    text-shadow: 1px 1px #000;
    font-weight: bold;
