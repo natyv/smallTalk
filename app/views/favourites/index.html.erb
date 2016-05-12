@@ -3,7 +3,10 @@
     <div class="nav-wrapper deep-orange accent-3">
       <a href="#!" class="brand-logo center">Favourites</a>
 
-      <a href="/" class="waves-effect waves-light btn blue accent-4 animated fadeInLeft"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <form action="/" method="get">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <button href="/" class="waves-effect waves-light btn blue accent-4 animated fadeInLeft"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+      </form>
 
     </div>
 </nav>
@@ -17,18 +20,36 @@
           <li><a href="<%=  array[0] %>"><%=  array[1]%></a></li>
           <li><a href="<%=  array[2] %>"><%=  array[3]%></a></li>
           <li><a href="<%=  array[4] %>"><%=  array[5]%></a></li>
+
+          <form action="/favourites/<%= fav.id%>" method="post">
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+            <input type="hidden" value="delete" name="_method">
+            <button class="delete waves-effect waves-light btn red accent-4">DELETE</button>
+          </form>
+
           </div>
         </div>
+
   <% elsif fav.category =="Giphy" || fav.category == "Yes/No" %>
         <div class="card">
           <div id='favouriteCard' class="card-content">
             <img class="gifImage" src="<%= fav.content %>" >
+            <form action="/favourites/<%= fav.id%>" method="post">
+              <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+              <input type="hidden" value="delete" name="_method">
+              <button class="delete waves-effect waves-light btn red accent-4">DELETE</button>
+            </form>
           </div>
         </div>
   <% else %>
         <div class="card">
           <div id='favouriteCard' class="card-content">
             <p><%= fav.content %></p>
+            <form action="/favourites/<%= fav.id%>" method="post">
+              <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+              <input type="hidden" value="delete" name="_method">
+              <button class="delete waves-effect waves-light btn red accent-4">DELETE</button>
+            </form>
           </div>
         </div>
       <% end %>

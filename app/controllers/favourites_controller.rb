@@ -14,6 +14,10 @@ class FavouritesController < ApplicationController
     render json: fav.to_json
   end
 
-
+  def destroy
+    fav =  Favourite.find(params[:id])
+    fav.destroy
+    redirect_to '/favourites'
+  end
 
 end
