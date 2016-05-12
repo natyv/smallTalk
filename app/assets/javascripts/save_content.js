@@ -9,12 +9,14 @@ $(function(){
       if (category === "Giphy" || category === "Yes/No"){
 
         var imgSrc = $('.gifImage').attr('src');
-        console.log(imgSrc);
+        var topic = $("#category").html();
+
+
 
         $.ajax({
           url: '/favourites',
           method: 'post',
-          data: {content: imgSrc, user_id: userId, category: category}
+          data: {content: imgSrc, user_id: userId, category: topic}
         }).done(function(response){
           console.log(response);
         });
@@ -32,7 +34,7 @@ $(function(){
           $.ajax({
             url: '/favourites',
             method: 'post',
-            data: {content: links, user_id: userId, category: category}
+            data: {content: links, user_id: userId}
           }).done(function(response){
             console.log(response);
           });
@@ -46,7 +48,7 @@ $(function(){
           $.ajax({
             url: '/favourites',
             method: 'post',
-            data: {content: save_data, user_id: userId, category: category}
+            data: {content: save_data, user_id: userId}
           }).done(function(response){
             console.log(response);
           });
