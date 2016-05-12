@@ -31,6 +31,10 @@
   margin-top:1em;
 }
 
+#answerBtn {
+  margin: 5px 0 5px 0;
+}
+
 nav{
   position: fixed;
   top:0;
