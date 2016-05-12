@@ -37,7 +37,7 @@ $( document ).ready(function() {
 
           $newsTitle.append($articleLink)
 
-          $('#showContent').append($newsTitle).append('<br>');
+          $('#showContent').append($newsTitle);
         }
       }
 

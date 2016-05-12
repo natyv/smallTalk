@@ -34,7 +34,7 @@ $( document ).ready(function() {
               }).html(article[i].data.title);
               $redditTitle.append($articleLink)
 
-            $('#showContent').append($redditTitle).append('<br>');
+            $('#showContent').append($redditTitle);
           }
         }
 
@@ -50,7 +50,6 @@ $( document ).ready(function() {
           if (indexRed < 5 && $('#category').html() === 'Reddit') {
             $('.titleReddit').remove();
             $('.linkReddit').remove();
-            // $('.score').remove();
 
             loopReddit(redditCollection[indexRed]);
             indexRed++;
