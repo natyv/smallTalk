@@ -119,8 +119,6 @@ $( document ).ready(function() {
             method: 'GET'
 
           }).done(function(response) {
-            console.log(response);
-            $('#showContent').html(response.answer);
 
             var $img = $('<img>').attr('src', response.image);
             $('#showContent').append($img);
