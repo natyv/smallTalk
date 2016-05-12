@@ -55,7 +55,10 @@ nav{
 }
 
 
-
+.linkNews, .linkReddit {
+  margin-bottom:20px;
+  display:block;
+}
 
 
 .section{
