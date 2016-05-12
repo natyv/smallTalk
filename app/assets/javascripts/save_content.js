@@ -9,15 +9,36 @@ $(function(){
       if (category === "Giphy" || category === "Yes/No"){
 
         var imgSrc = $('.gifImage').attr('src');
-        console.log(imgSrc);
+        var topic = $("#category").html();
+
+
 
         $.ajax({
           url: '/favourites',
           method: 'post',
-          data: {content: imgSrc, user_id: userId}
+          data: {content: imgSrc, user_id: userId, category: topic}
         }).done(function(response){
           console.log(response);
         });
+
+      } else if (category === "News" || category ===  "Reddit") {
+
+          var links = [];
+
+          $("a").each (function() {
+            if ($(this).hasClass('linkNews') || $(this).hasClass('linkReddit') ) {
+              links.push(($(this).attr('href')));
+            }
+          })
+
+          $.ajax({
+            url: '/favourites',
+            method: 'post',
+            data: {content: links, user_id: userId}
+          }).done(function(response){
+            console.log(response);
+          });
+
 
       } else {
 
