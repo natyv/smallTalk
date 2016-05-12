@@ -187,8 +187,12 @@
 
    <!-- Results Container Like + Next Navigation -->
   <div class="row">
+    <% if !session[:user].nil? %>
     <div class="col s6  m3 offset-m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn" id="like"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
     <div class="col s6 m3 center-align"><a id="category-next" class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+    <% else %>
+    <div class="col s12 center-align"><a id="category-next" class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+    <% end %>
   </div>
 </div>
 
