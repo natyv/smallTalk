@@ -1,11 +1,11 @@
 
 <nav>
-    <div class="nav-wrapper deep-orange accent-3">
+    <div class="nav-wrapper light-blue lighten-1">
       <a href="#!" class="brand-logo center">Favourites</a>
 
       <form action="/" method="get">
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <button href="/" class="waves-effect waves-light btn blue accent-4 animated fadeInLeft"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        <button href="/" class="waves-effect waves-light btn orange animated fadeInLeft"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
       </form>
 
     </div>
@@ -24,7 +24,7 @@
           <form action="/favourites/<%= fav.id%>" method="post">
             <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
             <input type="hidden" value="delete" name="_method">
-            <button class="delete waves-effect waves-light btn red accent-4">DELETE</button>
+            <button class="delete waves-effect waves-light btn red accent-4"><i class="material-icons">delete</i></button>
           </form>
 
           </div>
@@ -37,18 +37,18 @@
             <form action="/favourites/<%= fav.id%>" method="post">
               <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
               <input type="hidden" value="delete" name="_method">
-              <button class="delete waves-effect waves-light btn red accent-4">DELETE</button>
+              <button class="delete waves-effect waves-light btn red accent-4"><i class="material-icons">delete</i></button>
             </form>
           </div>
         </div>
   <% else %>
         <div class="card">
           <div id='favouriteCard' class="card-content">
-            <p><%= fav.content %></p>
+            <p><%= fav.content.gsub("Reveal Answer"," || Reveal Answer : ") %></p>
             <form action="/favourites/<%= fav.id%>" method="post">
               <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
               <input type="hidden" value="delete" name="_method">
-              <button class="delete waves-effect waves-light btn red accent-4">DELETE</button>
+              <button class="delete waves-effect waves-light btn red accent-4"><i class="material-icons">delete</i></button>
             </form>
           </div>
         </div>
