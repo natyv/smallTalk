@@ -2,7 +2,6 @@ $( document ).ready(function() {
 //news
   $('#news').on('click', function () {
     $('#showContent').empty();
-    var pageSize = 1
 
     $.ajax({
       url: "http://content.guardianapis.com/search?page-size=50&api-key=bcc713f7-cd86-40ea-9437-1510a468cd34",
@@ -11,56 +10,50 @@ $( document ).ready(function() {
 
       var newsCollection = response.response.results
 
-      var firstThree = newsCollection.slice(0,3);
-      var secondThree = newsCollection.slice(4,7);
-      var thirdThree = newsCollection.slice(8,11);
-      var fourthThree = newsCollection.slice(12,15);
-      var fifthThree = newsCollection.slice(16,19);
-      var sixthThree = newsCollection.slice(20,23);
-      var sevenThree = newsCollection.slice(24,27);
-      var eightThree = newsCollection.slice(28,31);
-      var nineThree = newsCollection.slice(32,35);
-      var tenThree = newsCollection.slice(38,41);
-      var elevenThree = newsCollection.slice(42,45);
-      var twelveThree = newsCollection.slice(46,49);
+      var firstThreeNews = newsCollection.slice(0,3);
+      var secondThreeNews = newsCollection.slice(4,7);
+      var thirdThreeNews = newsCollection.slice(8,11);
+      var fourthThreeNews = newsCollection.slice(12,15);
+      var fifthThreeNews = newsCollection.slice(16,19);
+      var sixthThreeNews = newsCollection.slice(20,23);
+      var sevenThreeNews = newsCollection.slice(24,27);
+      var eightThreeNews = newsCollection.slice(28,31);
+      var nineThreeNews = newsCollection.slice(32,35);
+      var tenThreeNews = newsCollection.slice(38,41);
+      var elevenThreeNews = newsCollection.slice(42,45);
+      var twelveThreeNews = newsCollection.slice(46,49);
 
 
-      var articleCollection = [secondThree, thirdThree, fourthThree, fifthThree, sixthThree, sevenThree, eightThree, nineThree, tenThree, elevenThree, twelveThree];
+      var articleCollection = [secondThreeNews, thirdThreeNews, fourthThreeNews, fifthThreeNews, sixthThreeNews, sevenThreeNews, eightThreeNews, nineThreeNews, tenThreeNews, elevenThreeNews, twelveThreeNews];
 
       var loopArticles = function(article) {
         for (var i = 0; i < article.length; i++ ) {
           console.log(article[i]);
-          var $newsTitle = $('<p>').html(article[i].webTitle).attr('class','title');
+          var $newsTitle = $('<p>').html(article[i].webTitle).attr('class','titleNews');
           var $articleLink = $('<a>').attr({
             href:article[i].webUrl,
-            class: 'link'
+            class: 'linkNews'
           }).html('Link To Article');
           $('#showContent').append($newsTitle).append($articleLink);
         }
       }
 
-      loopArticles(firstThree);
+      loopArticles(firstThreeNews);
 
       var $contentPara = $('<p>');
 
-      var $button = $('<button>Next</button>').attr('id','nextBtn');
-
       $('#showContent').append($contentPara);
       $('#category').html('News');
-      $contentPara.append($button)
 
       var index = 0
-      $('#nextBtn').on('click', function() {
-        if (index < 11) {
-          $('.title').empty();
-          $('.link').empty();
+      $('body').on('click','#category-next', function() {
+
+        if (index < 11 && $('#category').html() === 'News') {
+
+          $('.titleNews').remove();
+          $('.linkNews').remove();
           loopArticles(articleCollection[index]);
-          $contentPara.append($button)
           index++;
-        } else {
-          var $error = $('<p>').html('Sorry No More News For Now');
-          $('#showContent').empty()
-          $('#showContent').append($error);
         }
       });
     });

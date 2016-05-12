@@ -24,8 +24,10 @@
 //= require smalltalk
 //= require yesno
 //= require reddit
+//= require next
 //= require owl.carousel.js
 //= require owl.carousel.min.js
 //= require materialize
 //= require login
 //= require logout
+//= require save_content

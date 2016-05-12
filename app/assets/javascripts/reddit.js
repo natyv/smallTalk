@@ -30,14 +30,14 @@ $( document ).ready(function() {
         var loopReddit = function(article) {
           for (var i = 0; i < article.length; i++ ) {
 
-            var $redditTitle = $('<p>').html(article[i].data.title).attr('class','title');
+            var $redditTitle = $('<p>').html(article[i].data.title).attr('class','titleReddit');
 
             var $redditScore =
              $('<p>').html('Score ' + article[i].data.score).attr('class','score');
 
             var $articleLink = $('<a>').attr({
                 href:article[i].data.url,
-                class: 'link'
+                class: 'linkReddit'
               }).html('Link');
 
             $('#showContent').append($redditTitle).append($redditScore).append($articleLink);
@@ -48,26 +48,19 @@ $( document ).ready(function() {
 
         var $contentPara = $('<p>');
 
-        var $button = $('<button>Next</button>').attr('id','nextBtn');
-
         $('#showContent').append($contentPara);
         $('#category').html('Reddit');
-        $contentPara.append($button)
 
-        var index = 0
-        $('#nextBtn').on('click', function() {
-          if (index < 5) {
-            $('.title').empty();
-            $('.link').empty();
-            $('.score').empty();
+        var indexRed = 0
+        $('body').on('click','#category-next', function() {
+          if (indexRed < 5 && $('#category').html() === 'Reddit') {
+            console.log('yes reddit detected');
+            $('.titleReddit').remove();
+            $('.linkReddit').remove();
+            $('.score').remove();
 
-            loopReddit(redditCollection[index]);
-            $contentPara.append($button)
-            index++;
-          } else {
-            var $error = $('<p>').html('Sorry No More Reddit');
-            $('#showContent').empty()
-            $('#showContent').append($error);
+            loopReddit(redditCollection[indexRed]);
+            indexRed++;
           }
         });
       });
