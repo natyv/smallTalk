@@ -25,7 +25,6 @@ $( document ).ready(function() {
           method: 'GET'
 
         }).done(function(response) {
-          console.log(response)
           $('#showContent').html(response.text);
           $('#category').html('Number Facts');
         });

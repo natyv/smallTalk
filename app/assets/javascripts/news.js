@@ -28,7 +28,6 @@ $( document ).ready(function() {
 
       var loopArticles = function(article) {
         for (var i = 0; i < article.length; i++ ) {
-          console.log(article[i]);
           var $newsTitle = $('<p>').html(article[i].webTitle).attr('class','titleNews');
           var $articleLink = $('<a>').attr({
             href:article[i].webUrl,

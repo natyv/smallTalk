@@ -12,10 +12,6 @@ $( document ).ready(function() {
         console.log(response)
         var redditHot = response.data.children;
 
-        console.log(redditHot[0].data.title);
-        console.log(redditHot[0].data.score);
-        console.log(redditHot[0].data.url);
-
         var firstThree = redditHot.slice(0,3);
         var secondThree = redditHot.slice(4,7);
         var thirdThree = redditHot.slice(8,11);
@@ -54,7 +50,6 @@ $( document ).ready(function() {
         var indexRed = 0
         $('#category-next').on('click', function() {
           if (indexRed < 5 && $('#category').html() === 'Reddit') {
-            console.log('yes reddit detected');
             $('.titleReddit').remove();
             $('.linkReddit').remove();
             $('.score').remove();

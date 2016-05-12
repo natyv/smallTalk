@@ -7,6 +7,11 @@
 
 }
 
+.gifImage {
+  max-width:100%;
+  display:block;
+  margin: 0 auto;
+}
 
 .test-owl{
   width: 100%;
