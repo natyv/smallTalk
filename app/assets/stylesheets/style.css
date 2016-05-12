@@ -1,4 +1,10 @@
 
+
+.categories-text-smalltalk{
+  font-size: 18px;
+  font-weight: 900;
+}
+
 #logout{
   margin-top: 0;
   text-align: center;
@@ -198,6 +204,7 @@ bottom: 90px;
   background-image: url("https://demetriusrogers.files.wordpress.com/2014/09/small-talk.jpg");
   background-position: center;
   background-size: cover;
+  border: 4px solid #2962ff;
 }
 
 .categories-image-reddit{
