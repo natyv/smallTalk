@@ -121,7 +121,7 @@
 
 
 <!-- Categories Container -->
-<div class="categories-container" style="display: block;" id="categories-container" onload="Materialize.showStaggeredList('#categories-container')">
+<div class="categories-container animated fadeInLeft" style="display: block;" id="categories-container" onload="Materialize.showStaggeredList('#categories-container')">
 
 
   <!-- Categories Container 1st Row -->
@@ -268,15 +268,13 @@
   $(".button-collapse").sideNav();
   ///// Buttons Categories
   $(".categories-click").click(function(){
-    $("#categories-container").hide();
-  });
-  $(".categories-click").click(function(){
-    $(".results-container").show();
+    $("#categories-container").removeClass("fadeInLeft").addClass("fadeOutRight");
+    $("#categories-container").delay(100).fadeOut(100);
+    $(".results-container").delay(100).fadeIn(100);
     $("#backBtn").show();
-  });
-  $(".categories-click").click(function(){
     $("#carousel-show").show();
   });
+
 
   $('#backBtn').click(function() {
     $(".results-container").hide();
@@ -285,4 +283,5 @@
     $("#backBtn").hide();
 
   });
+
 </script>
