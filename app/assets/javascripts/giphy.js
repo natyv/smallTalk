@@ -9,8 +9,8 @@ $( document ).ready(function() {
       method: 'GET'
 
     }).done(function(response) {
-      console.log(response.data.image_original_url)
-      var $img = $('<img>').attr('src', response.data.image_original_url);
+      
+      var $img = $('<img>').attr('src', response.data.image_original_url).addClass('gifImage');
       $('#showContent').append($img);
       $('#category').html('Giphy');
     });
