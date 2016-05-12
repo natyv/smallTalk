@@ -30,3 +30,4 @@
 //= require materialize
 //= require login
 //= require logout
+//= require save_content
