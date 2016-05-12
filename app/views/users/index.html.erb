@@ -8,6 +8,7 @@
 
 
 
+
 <!--  Navigations -->
 <nav>
     <div class="nav-wrapper deep-orange accent-3">
@@ -161,13 +162,13 @@
 </div>
 
   <!-- Results Container -->
-<div class="results-container" style="display:none;">
+<div class="results-container " style="display:none;">
   <div class="row results">
-    <p class="center-align results-title-cats animated fadeInLeft" id="category"> </p>
-      <div class="row animated fadeInLeft">
+    <p class="center-align results-title-cats" id="category"> </p>
+      <div class="row">
         <div class="col s12 offset-m2 m8 offset-l3 l6 ">
-          <div class="card">
-            <div class="card-content">
+          <div class="card ">
+            <div class="card-content animated fadeInLeft" id="card-content-animated">
               <div id="showContent">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
               </div>
             </div>
@@ -268,19 +269,56 @@
   $(".button-collapse").sideNav();
   ///// Buttons Categories
   $(".categories-click").click(function(){
-    $("#categories-container").removeClass("fadeInLeft").addClass("fadeOutRight");
-    $("#categories-container").delay(100).fadeOut(100);
+
+    //Fade Out
+    $(".categories-container").removeClass("fadeInLeft").addClass("fadeOutRight");
+    $(".categories-container").delay(100).fadeOut(100);
+
+    //Fade In
+    $(".results-container").removeClass("fadeOutRight").addClass("fadeInLeft");
     $(".results-container").delay(100).fadeIn(100);
-    $("#backBtn").show();
-    $("#carousel-show").show();
+
+    $("#carousel-show").removeClass("fadeOutRight").addClass("fadeInLeft");
+    $("#carousel-show").delay(100).fadeIn(100);
+
+    $("#card-content-animated").removeClass("fadeOutRight").addClass("fadeInLeft");
+    $("#card-content-animated").delay(100).fadeIn(100);
+
+    $("#results-like-fav").removeClass("fadeOutRight").addClass("fadeInLeft");
+    $("#results-like-fav").delay(100).fadeIn(100);
+
+
+
+
+    $("#backBtn").removeClass("fadeOutLeft").addClass("fadeInLeft");
+    $("#backBtn").delay(100).fadeIn(100);
+
+
+
   });
 
 
   $('#backBtn').click(function() {
-    $(".results-container").hide();
-    $("#carousel-show").hide();
-    $("#categories-container").show();
-    $("#backBtn").hide();
+    //Fade In
+    $(".categories-container").removeClass("fadeOutRight").addClass("fadeInLeft");
+    $(".categories-container").delay(100).fadeIn(100);
+
+    //Fade Out
+    $(".results-container").removeClass("fadeInLeft").addClass("fadeOutRight");
+    $(".results-container").delay(100).fadeOut(100);
+
+    $("#carousel-show").removeClass("fadeInLeft").addClass("fadeOutRight");
+    $("#carousel-show").delay(100).fadeOut(100);
+
+    $("#card-content-animated").removeClass("fadeInLeft").addClass("fadeOutRight");
+    $("#card-content-animated").delay(100).fadeOut(100);
+
+    $("#results-like-fav").removeClass("fadeInLeft").addClass("fadeOutRight");
+    $("#results-like-fav").delay(100).fadeOut(100);
+
+
+    $("#backBtn").removeClass("fadeInLeft").addClass("fadeOutLeft");
+    $("#backBtn").delay(100).fadeOut(100);
 
   });
 
