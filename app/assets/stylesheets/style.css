@@ -1,4 +1,28 @@
+nav{
+  position: fixed;
+  top:0;
+  z-index: 10000000;
 
+}
+
+.section{
+  margin-top: 60px;
+}
+
+#results-like-fav{
+  position: fixed;
+text-align: center;
+width: 100%;
+bottom: 90px;
+}
+
+.card .card-content{
+  margin-bottom: 400px;
+  min-height: 150px;
+  
+  font-size: 16px;
+
+}
 .nav-signout{
 
 }
@@ -19,11 +43,12 @@
 
 .modal-fixed-nav{
   float: right;
+      margin-top: 10px;
 }
 
 .modal .modal-content{
   padding: 0;
-  padding-top: 10px;
+  padding-top: 75px;
 }
 
 .modal-position{
@@ -156,7 +181,7 @@
 }
 
 .owl-item {
-  border: 1px solid black;
+
 }
 
 .owl-fixed{

@@ -4254,7 +4254,7 @@ nav .input-field label.active {
 @media only screen and (min-width: 601px) {
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 64px;
-    line-height: 64px;
+
   }
   .navbar-fixed {
     height: 64px;
@@ -4561,7 +4561,7 @@ small {
 }
 
 .card.small .card-content, .card.medium .card-content, .card.large .card-content {
-  max-height: 40%;
+  max-height: 50%;
   overflow: hidden;
 }
 
@@ -5292,7 +5292,7 @@ a.waves-effect .waves-ripple {
   top: -100%;
   margin: 0;
   width: 100%;
-  max-height: 45%;
+  max-height: 50%;
   border-radius: 0;
   will-change: bottom, opacity;
 }

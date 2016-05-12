@@ -15,22 +15,23 @@
 
       <!-- If user is logged in, show the user email and logout button -->
       <button data-target="modal1" class="btn modal-trigger modal-fixed-nav"><i class="fa fa-user" aria-hidden="true"></i></button>
-
-
-
+      <a class="waves-effect waves-light btn"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
 
 
     </div>
   </nav>
 
+
+
+
+<div class="section">
+
+
+
 <!-- Modal Structure -->
 
 
-
-
-
-
-<div id="modal1" class="modal bottom-sheet modal-position" style="top: -100%;">
+<div id="modal1" class="modal bottom-sheet modal-position" style="top: -100%; overflow: hidden;">
   <div class="modal-content">
     <div class="row">
 
@@ -187,6 +188,7 @@
 
 
    <!-- Results Container Like + Next Navigation -->
+ <div id="results-like-fav">
   <div class="row">
     <% if !session[:user].nil? %>
     <div class="col s6  m3 offset-m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn" id="like"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
@@ -196,10 +198,10 @@
     <% end %>
   </div>
 </div>
-
+</div>
 
  <div class="owl-carousel center-align owl-fixed" id="carousel-show" style="display:none;">
-     <div class="item"><a class="btn-floating btn-large waves-effect waves-light "><i class="material-icons">add</i></a></div>
+
 
      <div class="col s4 m4 l4 center-align categories-click cats"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-cats"></a></div>
      <div class="col s4 m4 l4 center-align categories-click news"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-news"></a></div>
@@ -213,6 +215,8 @@
      <div class="col s4 m4 l4 center-align categories-click smalltalks"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-smalltalks"></a></div>
      <div class="col s4 m4 l4 center-align categories-click reddit"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-reddit"></a></div>
      <div class="col s4 m4 l4 center-align categories-click yesno"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-yesno"></a></div>
+
+ </div>
 
  </div>
 <!-- Scripts -->
@@ -232,7 +236,7 @@
               loop:true
           },
           600:{
-              items:5,
+              items:8,
               nav:true,
               loop:true
           },
