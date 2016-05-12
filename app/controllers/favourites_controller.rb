@@ -1,4 +1,10 @@
 class FavouritesController < ApplicationController
+
+  def index
+    @user = session[:user]
+    @fav = Favourite.where(user_id: @user["id"])
+  end
+
   def create
     fav = Favourite.new
     fav.content = params[:content]

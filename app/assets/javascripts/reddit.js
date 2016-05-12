@@ -28,15 +28,15 @@ $( document ).ready(function() {
 
             var $redditTitle = $('<p>').html(article[i].data.title).attr('class','titleReddit');
 
-            var $redditScore =
-             $('<p>').html('Score ' + article[i].data.score).attr('class','score');
+            // var $redditScore =
+            //  $('<p>').html('Score ' + article[i].data.score).attr('class','score');
 
             var $articleLink = $('<a>').attr({
                 href:article[i].data.url,
                 class: 'linkReddit'
               }).html('Link');
 
-            $('#showContent').append($redditTitle).append($redditScore).append($articleLink);
+            $('#showContent').append($redditTitle).append($articleLink);
           }
         }
 
@@ -52,7 +52,7 @@ $( document ).ready(function() {
           if (indexRed < 5 && $('#category').html() === 'Reddit') {
             $('.titleReddit').remove();
             $('.linkReddit').remove();
-            $('.score').remove();
+            // $('.score').remove();
 
             loopReddit(redditCollection[indexRed]);
             indexRed++;

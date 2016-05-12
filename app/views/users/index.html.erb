@@ -44,7 +44,7 @@
         <form action="/signout" method ="post">
           <input type="hidden" value="delete" name="_method">
           <button id="logout" style="float:right">Logout</button>
-          <button id="show-favourites" >Favourites</button>
+          <a href="/favourites"><button id="show-favourites" >Favourites</button></a>
         </form>
       <button>
       <% else %>
@@ -83,7 +83,7 @@
 
       <!-- SignUp Button -->
       <div class="col s4 offset-s4 center-align">
-        <a class="waves-effect waves-light"><i class="material-icons left"></i>Sign-Up</a>
+        <a href="/signup" class="waves-effect waves-light"><i class="material-icons left"></i>Sign-Up</a>
       </div>
     </form>
       <% end %>
