@@ -21,4 +21,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.password = params[:user][:password]
+    @user.save
+    redirect_to '/'
+  end
+
 end
