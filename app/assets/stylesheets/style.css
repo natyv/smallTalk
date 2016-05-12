@@ -13,6 +13,13 @@
   text-align: center;
 }
 
+#favouriteContent {
+  margin-top:8em;
+}
+
+#favouriteCard {
+  margin-bottom:0;
+}
 
 nav{
   position: fixed;
