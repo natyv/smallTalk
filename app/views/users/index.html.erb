@@ -15,7 +15,7 @@
 
       <!-- If user is logged in, show the user email and logout button -->
       <button data-target="modal1" class="btn modal-trigger modal-fixed-nav"><i class="fa fa-user" aria-hidden="true"></i></button>
-      <a class="waves-effect waves-light btn"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <a id="backBtn" class="waves-effect waves-light btn"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
 
 
     </div>
@@ -271,6 +271,8 @@
 
   $('#backBtn').click(function() {
     $(".results-container").hide();
+    $("#carousel-show").hide();
     $("#categories-container").show();
+
   });
 </script>
