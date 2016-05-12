@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-  $('body').on('click','#category-next', function() {
+  $('#category-next').on('click', function() {
 
     if ($('#category').html() === 'Cats') {
         $('#showContent').empty();

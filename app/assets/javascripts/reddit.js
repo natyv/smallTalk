@@ -52,7 +52,7 @@ $( document ).ready(function() {
         $('#category').html('Reddit');
 
         var indexRed = 0
-        $('body').on('click','#category-next', function() {
+        $('#category-next').on('click', function() {
           if (indexRed < 5 && $('#category').html() === 'Reddit') {
             console.log('yes reddit detected');
             $('.titleReddit').remove();
