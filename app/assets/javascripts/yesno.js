@@ -12,7 +12,7 @@ $( document ).ready(function() {
       console.log(response);
       $('#showContent').html(response.answer);
 
-      var $img = $('<img>').attr('src', response.image);
+      var $img = $('<img>').attr('src', response.image).addClass('gifImage');
       $('#showContent').append($img);
       $('#category').html('Yes/No');
     });
