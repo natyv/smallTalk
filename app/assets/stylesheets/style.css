@@ -27,6 +27,10 @@
   margin-bottom:0;
 }
 
+.delete {
+  margin-top:1em;
+}
+
 nav{
   position: fixed;
   top:0;
