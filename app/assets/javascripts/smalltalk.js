@@ -12,7 +12,6 @@ $( document ).ready(function() {
 
       var rand = response[Math.floor(Math.random() * response.length)];
 
-      console.log(rand.conversation)
       $('#showContent').empty();
       $('#showContent').html(rand.conversation);
       $('#category').html('Small Talk');

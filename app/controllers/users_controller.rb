@@ -13,7 +13,9 @@ class UsersController < ApplicationController
     @user.password = params[:password]
 
     if @user.save
+      session[:user] = @user
       redirect_to '/'
+
     else
       render :new
     end

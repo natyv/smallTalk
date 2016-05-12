@@ -13,7 +13,7 @@ $(function(){
       },
       success: function(){
          location.reload();
-         
+
         // Check if the user is viewing a topic - if so - reload with an intent.
         // if($('.results-container').length > 0){
         //   window.location = '/?view=1';}
