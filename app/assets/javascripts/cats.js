@@ -11,6 +11,7 @@ $( document ).ready(function() {
       console.log(response.facts[0])
       $('#showContent').html(response.facts[0]);
       $('#category').html('Cats');
+      // localStorage.setItem('activeCategory', 'cats');
     });
   });
 });

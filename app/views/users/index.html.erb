@@ -39,6 +39,7 @@
       <% if !session[:user].nil? %>
       <button class="nav-signout">
         <div>Signed in as... <%= session[:user]["email"] %></div>
+        <p style="display:none" id="user_id"><%=session[:user]["id"]%></p>
         <form action="/signout" method ="post">
           <input type="hidden" value="delete" name="_method">
           <button id="logout" style="float:right">Logout</button>
@@ -241,13 +242,18 @@
               loop:true
           }
       }
-  })
+  });
   $( "#social-media-overlay-btn" ).click(function() {
   $( "#social-media-overlay" ).fadeToggle( 250, "linear" );
   });
 
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
   $('.modal-trigger').leanModal();
+
+  // if(localStorage.getItem('activeCategory')){
+  //   $('.'+localStorage.getItem('activeCategory')).trigger('click');
+  //   localStorage.removeItem('activeCategory');
+  // }
   });
   $(".button-collapse").sideNav();
   ///// Buttons Categories
@@ -264,5 +270,5 @@
   $('#backBtn').click(function() {
     $(".results-container").hide();
     $("#categories-container").show();
-  })
+  });
 </script>
