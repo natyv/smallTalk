@@ -4,6 +4,12 @@ nav{
   z-index: 10000000;
 }
 
+#showContent > img{
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 .owl-prev{
   font-size: 10px;
   width: 35px;
@@ -48,12 +54,7 @@ nav{
   width: 50px;
 }
 
-#showContent{
-  opacity: 1;
-   transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out;
-}
+
 
 
 
@@ -216,6 +217,7 @@ bottom: 90px;
 
 .results-title-cats{
   color: lightgrey;
+  height: 21px;
 }
 
 .results-btn{
