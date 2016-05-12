@@ -1,4 +1,8 @@
 
+.nav-signout{
+
+}
+
 .social-media-btn-inner{
 
 }
@@ -9,9 +13,7 @@
 }
 
 .modal-fixed-nav{
-  position: fixed;
-  top: 0;
-  right: 0;
+  float: right;
 }
 
 .modal .modal-content{
@@ -48,12 +50,59 @@
   margin-top: 45px;
 }
 
-.categories-image{
+.categories-image-cats{
   background-image: url("http://i2.cdn.turner.com/cnnnext/dam/assets/150324154025-14-internet-cats-restricted-super-169.jpeg");
   background-position: center;
   background-size: cover;
-
 }
+
+.categories-image-news{
+  background-image: url("http://www.historicpages.com/heads/1863nyt.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.categories-image-numberFacts{
+  background-image: url("https://proxy.bigfooty.com/forum/proxy.php?image=http%3A%2F%2Fi46.tinypic.com%2F2wnr48y.png&hash=f9f7b3fdbc2c02dbf97d484401fcdcf0");
+  background-position: center;
+  background-size: cover;
+}
+
+.categories-image-randomFacts{
+  background-image: url("http://cdn.truthinmedia.com/wp-content/uploads/2014/10/bigstock-silhouette-with-a-question-mar-59367497.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.categories-image-trivia{
+  background-image: url("http://banc.org.au/wp-content/uploads/2015/12/Trivia.png");
+  background-position: center;
+  background-size: cover;
+}
+.categories-image-giphy{
+  background-image: url("https://pbs.twimg.com/profile_images/699676239620083713/WCUM0RqH.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.categories-image-smalltalks{
+  background-image: url("https://demetriusrogers.files.wordpress.com/2014/09/small-talk.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.categories-image-reddit{
+  background-image: url("http://www.wired.com/wp-content/uploads/2015/07/reddit-alien-red.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.categories-image-yesno{
+  background-image: url("http://4.bp.blogspot.com/-Fo5X8k-ivjY/ULN5YKArhgI/AAAAAAAAhZ0/CtHq8w36e7w/s1600/yes-no.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 
 .social-media-btn{
   position: relative;
