@@ -1,18 +1,37 @@
-<a href="/" >Back</a>
 
-<h3>Favourites</h3>
+<nav>
+    <div class="nav-wrapper deep-orange accent-3">
+      <a href="#!" class="brand-logo center">Favourites</a>
 
-<% @fav.each do |fav| %>
-  <% if fav.category == "News" || fav.category == "Reddit" %>
-    <% array = JSON.parse(fav.content) %>
-    <a href="<%=  array[0] %>"><%=  array[1]%></a></br>
-    <a href="<%=  array[2] %>"><%=  array[3]%></a></br>
-    <a href="<%=  array[4] %>"><%=  array[5]%></a></br>
+      <a href="/" class="waves-effect waves-light btn blue accent-4 animated fadeInLeft"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+
+    </div>
+</nav>
+
+<div id="favouriteContent" class="container">
+  <% @fav.each do |fav| %>
+    <% if fav.category == "News" || fav.category == "Reddit" %>
+        <div class="card">
+          <div id='favouriteCard' class="card-content">
+          <% array = JSON.parse(fav.content) %>
+          <li><a href="<%=  array[0] %>"><%=  array[1]%></a></li>
+          <li><a href="<%=  array[2] %>"><%=  array[3]%></a></li>
+          <li><a href="<%=  array[4] %>"><%=  array[5]%></a></li>
+          </div>
+        </div>
   <% elsif fav.category =="Giphy" || fav.category == "Yes/No" %>
-    <img src="<%= fav.content %>" >
+        <div class="card">
+          <div id='favouriteCard' class="card-content">
+            <img class="gifImage" src="<%= fav.content %>" >
+          </div>
+        </div>
   <% else %>
-    <p><%= fav.category %></p>
-    <p><%= fav.content %></p>
-  <% end %>
+        <div class="card">
+          <div id='favouriteCard' class="card-content">
+            <p><%= fav.content %></p>
+          </div>
+        </div>
+      <% end %>
+  <% end  %>
 
-<% end  %>
+</div>
