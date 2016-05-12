@@ -14,10 +14,29 @@ $(function(){
         $.ajax({
           url: '/favourites',
           method: 'post',
-          data: {content: imgSrc, user_id: userId}
+          data: {content: imgSrc, user_id: userId, category: category}
         }).done(function(response){
           console.log(response);
         });
+
+      } else if (category === "News" || category ===  "Reddit") {
+
+          var links = [];
+
+          $("a").each (function() {
+            if ($(this).hasClass('linkNews') || $(this).hasClass('linkReddit') ) {
+              links.push(($(this).attr('href')));
+            }
+          })
+
+          $.ajax({
+            url: '/favourites',
+            method: 'post',
+            data: {content: links, user_id: userId, category: category}
+          }).done(function(response){
+            console.log(response);
+          });
+
 
       } else {
 
@@ -27,7 +46,7 @@ $(function(){
           $.ajax({
             url: '/favourites',
             method: 'post',
-            data: {content: save_data, user_id: userId}
+            data: {content: save_data, user_id: userId, category: category}
           }).done(function(response){
             console.log(response);
           });
