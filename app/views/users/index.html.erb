@@ -1,30 +1,54 @@
 
+
+
+
+
+
+
+
+
+
 <!--  Navigations -->
 <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo center">SmallTalk</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
       <!-- If user is logged in, show the user email and logout button -->
+      <button data-target="modal1" class="btn modal-trigger modal-fixed-nav"><i class="fa fa-user" aria-hidden="true"></i></button>
+
+
+
+
+
+    </div>
+  </nav>
+
+<!-- Modal Structure -->
+
+
+
+
+
+
+<div id="modal1" class="modal bottom-sheet modal-position" style="top: -100%;">
+  <div class="modal-content">
+    <div class="row">
+
+
+      <!-- if logged in - SHOW -->
       <% if !session[:user].nil? %>
+      <button class="nav-signout">
         <div>Signed in as... <%= session[:user]["email"] %></div>
         <form action="/signout" method ="post">
           <input type="hidden" value="delete" name="_method">
           <button id="logout" style="float:right">Logout</button>
+          <button id="show-favourites" >Favourites</button>
         </form>
-      <% end %>
-    </div>
-  </nav>
-
-  <!-- Modal Button -->
-  <button data-target="modal1" class="btn modal-trigger modal-fixed-nav"><i class="fa fa-user" aria-hidden="true"></i></button>
+      <button>
+      <% else %>
+      <!-- if NOT logged in - SHOW -->
 
 
-
-
-<!-- Modal Structure -->
-<div id="modal1" class="modal bottom-sheet modal-position" style="top: -100%;">
-  <div class="modal-content">
-    <div class="row">
     <form class="col s12">
       <div class="row">
         <form action="/signin" method = "post">
@@ -43,6 +67,12 @@
         </div>
 
 
+
+
+
+
+
+
         <!-- Login Button -->
         <div class="col s4 offset-s4 center-align">
           <a id="login" class="waves-effect waves-light btn"><i class="material-icons left"></i>Login</a>
@@ -54,6 +84,7 @@
         <a class="waves-effect waves-light"><i class="material-icons left"></i>Sign-Up</a>
       </div>
     </form>
+      <% end %>
   </div>
   </div>
   <div class="modal-footer">
@@ -90,9 +121,10 @@
 
   <!-- Categories Container 1st Row -->
   <div class="row categories">
-    <div id="cats" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-    <div id="news" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div id="numberFacts" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
+    <div id="cats" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-cats"></a></div>
+    <div id="news" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-news"></a></div>
+    <div id="numberFacts" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-numberFacts"></a></div>
+
     <div class="col s4 center-align categories-text">Cats</div>
     <div class="col s4 center-align categories-text">News</div>
     <div class="col s4 center-align categories-text">Numbers</div>
@@ -101,9 +133,10 @@
 
   <!-- Categories Container 2nd Row -->
   <div class="row categories">
-    <div id="randomFacts" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-    <div id="trivia" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div id="giphy" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red"></a></div>
+    <div id="randomFacts" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-randomFacts"></a></div>
+    <div id="trivia" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-trivia"></a></div>
+    <div id="giphy" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red categories-image-giphy"></a></div>
+
     <div class="col s4 center-align categories-text">Random</div>
     <div class="col s4 center-align categories-text">Trivia</div>
     <div class="col s4 center-align categories-text">Giphy</div>
@@ -113,10 +146,9 @@
   <!-- Categories Container 3rd Row -->
   <div class="row categories">
 
-    <div id="smalltalks" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red "><i class="material-icons">add</i></a></div>
-    <div id="reddit" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-    <div id="yesno" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red"><i class="material-icons">add</i></a></div>
-
+    <div id="smalltalks" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-smalltalks"></a></div>
+    <div id="reddit" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-reddit"></a></div>
+    <div id="yesno" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-yesno"></a></div>
     <div class="col s4 center-align categories-text">SmallTalk</div>
     <div class="col s4 center-align categories-text">Reddit</div>
     <div class="col s4 center-align categories-text">Yes or No</div>
@@ -126,7 +158,7 @@
   <!-- Results Container -->
 <div class="results-container" style="display:none;">
   <div class="row results">
-    <p class="center-align results-title-cats" id = "category"> </p>
+    <p class="center-align results-title-cats" id="category"> </p>
       <div class="row">
         <div class="col s12 offset-m2 m8 offset-l3 l6 ">
           <div class="card">
@@ -158,26 +190,23 @@
     <div class="col s6  m3 offset-m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
     <div class="col s6  m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
   </div>
-
-
-
-
 </div>
 
 
- <div class="owl-carousel red center-align owl-fixed" id="carousel-show" style="display:none;">
-     <div class="item"><a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a></div>
-     <div class="item"><h4>2</h4></div>
-     <div class="item"><h4>3</h4></div>
-     <div class="item"><h4>4</h4></div>
-     <div class="item"><h4>5</h4></div>
-     <div class="item"><h4>6</h4></div>
-     <div class="item"><h4>7</h4></div>
-     <div class="item"><h4>8</h4></div>
-     <div class="item"><h4>9</h4></div>
-     <div class="item"><h4>10</h4></div>
-     <div class="item"><h4>11</h4></div>
-     <div class="item"><h4>12</h4></div>
+ <div class="owl-carousel center-align owl-fixed" id="carousel-show" style="display:none;">
+     <div class="item"><a class="btn-floating btn-large waves-effect waves-light "><i class="material-icons">add</i></a></div>
+
+     <div id="cats" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-cats"></a></div>
+     <div id="news" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-news"></a></div>
+     <div id="numberFacts" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-numberFacts"></a></div>
+
+     <div id="randomFacts" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-randomFacts"></a></div>
+     <div id="trivia" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-trivia"></a></div>
+     <div id="giphy" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red categories-image-giphy"></a></div>
+
+     <div id="smalltalks" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-smalltalks"></a></div>
+     <div id="reddit" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-reddit"></a></div>
+     <div id="yesno" class="col s4 m4 l4 center-align categories-click"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-yesno"></a></div>
  </div>
 <!-- Scripts -->
 <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -185,10 +214,28 @@
 <!-- Custom Scripts -->
 <script>
   $(document).ready(function(){
-    $(document).ready(function(){
-          $(".owl-carousel").owlCarousel();
-      });
-
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:5,
+              nav:false,
+              loop:true
+          },
+          600:{
+              items:5,
+              nav:true,
+              loop:true
+          },
+          1000:{
+              items:8,
+              nav:true,
+              loop:true
+          }
+      }
+  })
   $( "#social-media-overlay-btn" ).click(function() {
   $( "#social-media-overlay" ).fadeToggle( 250, "linear" );
   });
