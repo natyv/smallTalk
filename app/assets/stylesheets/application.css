@@ -11,7 +11,10 @@
  * file per style scope.
  *
 
- *= require_tree .
+ *= require materialize
+ *= require owl.carousel
+ *= require sessions
+ *= require style
  *= require_self
 
  */
