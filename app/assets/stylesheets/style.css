@@ -1,4 +1,10 @@
 
+
+.categories-text-smalltalk{
+  font-size: 18px;
+  font-weight: 900;
+}
+
 #logout{
   margin-top: 0;
   text-align: center;
@@ -43,10 +49,10 @@ nav{
   left: 75px;
   border-radius: 30px;
 
-  color: red;
+  color: #aa00ff ;
   font-weight: 200;
   padding: 8px 0 0 0;
-  border: 1px solid red;
+  border: 1px solid #aa00ff ;
 }
 
 .owl-next{
@@ -59,10 +65,10 @@ nav{
   right: 75px;
   border-radius: 30px;
 
-  color: red;
+  color: #aa00ff;
   font-weight: 200;
   padding: 8px 0 0 0;
-  border: 0.8px solid red;
+  border: 0.8px solid #aa00ff;
 
 
 }
@@ -152,7 +158,7 @@ bottom: 90px;
 .categories-text{
   margin-top: 8px;
   font-weight: bold;
-  color: #2196f3;
+  color: #aa00ff ;
 }
 
 .categories-container{
@@ -163,53 +169,62 @@ bottom: 90px;
   background-image: url("http://i2.cdn.turner.com/cnnnext/dam/assets/150324154025-14-internet-cats-restricted-super-169.jpeg");
   background-position: center;
   background-size: cover;
+  border: 1px solid #aa00ff;
 }
 
 .categories-image-news{
   background-image: url("http://www.historicpages.com/heads/1863nyt.jpg");
   background-position: center;
   background-size: cover;
+  border: 1px solid #aa00ff;
 }
 
 .categories-image-numberFacts{
   background-image: url("https://proxy.bigfooty.com/forum/proxy.php?image=http%3A%2F%2Fi46.tinypic.com%2F2wnr48y.png&hash=f9f7b3fdbc2c02dbf97d484401fcdcf0");
   background-position: center;
   background-size: cover;
+  border: 1px solid #aa00ff;
 }
 
 .categories-image-randomFacts{
   background-image: url("http://cdn.truthinmedia.com/wp-content/uploads/2014/10/bigstock-silhouette-with-a-question-mar-59367497.jpg");
   background-position: center;
   background-size: cover;
+  border: 1px solid #aa00ff;
 }
 
 .categories-image-trivia{
   background-image: url("http://banc.org.au/wp-content/uploads/2015/12/Trivia.png");
   background-position: center;
   background-size: cover;
+  border: 1px solid #aa00ff;
 }
 .categories-image-giphy{
   background-image: url("https://pbs.twimg.com/profile_images/699676239620083713/WCUM0RqH.jpg");
   background-position: center;
   background-size: cover;
+  border: 1px solid #aa00ff;
 }
 
 .categories-image-smalltalks{
   background-image: url("https://demetriusrogers.files.wordpress.com/2014/09/small-talk.jpg");
   background-position: center;
   background-size: cover;
+  border: 5px solid #aa00ff ;
 }
 
 .categories-image-reddit{
   background-image: url("http://www.wired.com/wp-content/uploads/2015/07/reddit-alien-red.jpg");
   background-position: center;
   background-size: cover;
+  border: 1px solid #aa00ff;
 }
 
 .categories-image-yesno{
   background-image: url("http://4.bp.blogspot.com/-Fo5X8k-ivjY/ULN5YKArhgI/AAAAAAAAhZ0/CtHq8w36e7w/s1600/yes-no.jpg");
   background-position: center;
   background-size: cover;
+  border: 1px solid #aa00ff;
 }
 
 

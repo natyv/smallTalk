@@ -8,15 +8,16 @@
 
 
 
+
 <!--  Navigations -->
 <nav>
-    <div class="nav-wrapper deep-orange accent-3">
+    <div class="nav-wrapper  light-blue lighten-1">
       <a href="#!" class="brand-logo center">SmallTalk</a>
 
       <!-- If user is logged in, show the user email and logout button -->
 
-      <button data-target="modal1" class="btn modal-trigger modal-fixed-nav blue accent-4"><i class="fa fa-user" aria-hidden="true"></i></button>
-      <a id="backBtn" class="waves-effect waves-light btn blue accent-4 animated fadeInLeft" style="display: none;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <button data-target="modal1" class="btn modal-trigger modal-fixed-nav purple accent-4"><i class="fa fa-user" aria-hidden="true"></i></button>
+      <a id="backBtn" class="waves-effect waves-light btn purple accent-4 animated fadeInLeft" style="display: none;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
 
 
     </div>
@@ -46,8 +47,8 @@
         <form action="/signout" method ="post">
           <input type="hidden" value="delete" name="_method">
             <!-- <button id="logout">Logout</button></li> -->
-            <a id="logout" class="waves-effect waves-light btn blue accent-4 s6 col offset-s3" style="height: 68px; margin-bottom: 13px;"><p><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</p></a>
-            <a href="/favourites" id="show-favourites" style="height: 68px; margin-bottom: 13px;" class="waves-effect waves-light btn blue accent-4 s6 col offset-s3"><p><i class="fa fa-heart" aria-hidden="true"></i> Favourites</p></a>
+            <a id="logout" class="waves-effect waves-light btn purple accent-4 s6 col offset-s3" style="height: 68px; margin-bottom: 13px;"><p><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</p></a>
+            <a href="/favourites" id="show-favourites" style="height: 68px; margin-bottom: 13px;" class="waves-effect waves-light btn purple accent-4 s6 col offset-s3"><p><i class="fa fa-heart" aria-hidden="true"></i> Favourites</p></a>
         </form>
 
       <% else %>
@@ -139,11 +140,11 @@
   <!-- Categories Container 2nd Row -->
   <div class="row categories">
     <div class="col s4 m4 l4 center-align categories-click "><a class="randomFacts btn-floating btn-large waves-effect waves-light hoverable red categories-image-randomFacts"></a></div>
-    <div class="col s4 m4 l4 center-align categories-click "><a class="trivia btn-floating btn-large waves-effect waves-light hoverable red categories-image-trivia"></a></div>
+    <div class="col s4 m4 l4 center-align categories-click "><a class="smalltalks btn-floating btn-large waves-effect waves-light hoverable red categories-image-smalltalks"></a></div>
     <div class="col s4 m4 l4 center-align categories-click "><a class="giphy btn-floating btn-large waves-effect waves-light hoverable categories-image red categories-image-giphy"></a></div>
 
     <div class="col s4 center-align categories-text">Random</div>
-    <div class="col s4 center-align categories-text">Trivia</div>
+    <div class="col s4 center-align categories-text categories-text-smalltalk">SmallTalk</div>
     <div class="col s4 center-align categories-text">Giphy</div>
   </div>
 
@@ -151,23 +152,24 @@
   <!-- Categories Container 3rd Row -->
   <div class="row categories">
 
-    <div class="col s4 m4 l4 center-align categories-click "><a class="smalltalks btn-floating btn-large waves-effect waves-light hoverable red categories-image-smalltalks"></a></div>
+
     <div class="col s4 m4 l4 center-align categories-click "><a class="reddit btn-floating btn-large waves-effect waves-light hoverable red categories-image-reddit"></a></div>
+      <div class="col s4 m4 l4 center-align categories-click "><a class="trivia btn-floating btn-large waves-effect waves-light hoverable red categories-image-trivia"></a></div>
     <div  class="col s4 m4 l4 center-align categories-click "><a class="yesno btn-floating btn-large waves-effect waves-light hoverable red categories-image-yesno"></a></div>
-    <div class="col s4 center-align categories-text">SmallTalk</div>
     <div class="col s4 center-align categories-text">Reddit</div>
+    <div class="col s4 center-align categories-text">Trivia</div>
     <div class="col s4 center-align categories-text">Yes or No</div>
   </div>
 </div>
 
   <!-- Results Container -->
-<div class="results-container" style="display:none;">
+<div class="results-container " style="display:none;">
   <div class="row results">
-    <p class="center-align results-title-cats animated fadeInLeft" id="category"> </p>
-      <div class="row animated fadeInLeft">
+    <p class="center-align results-title-cats" id="category"> </p>
+      <div class="row">
         <div class="col s12 offset-m2 m8 offset-l3 l6 ">
-          <div class="card">
-            <div class="card-content">
+          <div class="card animated fadeInLeft" id="card-content-animated">
+            <div class="card-content " >
               <div id="showContent">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
               </div>
             </div>
@@ -194,10 +196,10 @@
  <div id="results-like-fav" class="animated fadeInLeft">
   <div class="row">
     <% if !session[:user].nil? %>
-    <div class="col s6  m3 offset-m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable deep-orange accent-3 results-btn" id="like"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
-    <div class="col s6 m3 center-align"><a id="category-next" class="btn-floating btn-large waves-effect waves-light hoverable deep-orange accent-3 results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+    <div class="col s6  m3 offset-m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable purple accent-4 results-btn" id="like"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
+    <div class="col s6 m3 center-align"><a id="category-next" class="btn-floating btn-large waves-effect waves-light hoverable purple accent-4 results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
     <% else %>
-    <div class="col s12 center-align"><a id="category-next" class="btn-floating btn-large waves-effect waves-light hoverable deep-orange accent-3 results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+    <div class="col s12 center-align"><a id="category-next" class="btn-floating btn-large waves-effect waves-light hoverable purple accent-4 results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
     <% end %>
   </div>
 </div>
@@ -205,7 +207,7 @@
 
  <div class="owl-carousel center-align owl-fixed animated fadeInLeft" id="carousel-show" style="display:none;">
 
-
+     <div class="col s4 m4 l4 center-align categories-click smalltalks"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-smalltalks"><p class="carousel-text">SmallTalk</p></a></div>
      <div class="col s4 m4 l4 center-align categories-click cats"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-cats"><p class="carousel-text">Cats</p></a></div>
      <div class="col s4 m4 l4 center-align categories-click news"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-news"><p class="carousel-text">News</p></a></div>
      <div class="col s4 m4 l4 center-align categories-click numberFacts"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-numberFacts"><p class="carousel-text">NumberFacts</p></a></div>
@@ -215,7 +217,7 @@
      <div class="col s4 m4 l4 center-align categories-click giphy"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red categories-image-btn categories-image-giphy"><p class="carousel-text">Giphy</p></a></div>
 
 
-     <div class="col s4 m4 l4 center-align categories-click smalltalks"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-smalltalks"><p class="carousel-text">SmallTalk</p></a></div>
+
      <div class="col s4 m4 l4 center-align categories-click reddit"><a class="btn-floating btn-large waves-effect waves-light hoverable red  categories-image-btn categories-image-reddit"><p class="carousel-text">Reddit</p></a></div>
      <div class="col s4 m4 l4 center-align categories-click yesno"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-yesno"><p class="carousel-text">YesNo</p></a></div>
 
@@ -268,20 +270,58 @@
   $(".button-collapse").sideNav();
   ///// Buttons Categories
   $(".categories-click").click(function(){
-    $("#categories-container").removeClass("fadeInLeft").addClass("fadeOutRight");
-    $("#categories-container").delay(100).fadeOut(100);
+
+    //Fade Out
+    $(".categories-container").removeClass("fadeInLeft").addClass("fadeOutRight");
+    $(".categories-container").delay(100).fadeOut(100);
+
+    //Fade In
+    $(".results-container").removeClass("fadeOutRight").addClass("fadeInLeft");
     $(".results-container").delay(100).fadeIn(100);
-    $("#backBtn").show();
-    $("#carousel-show").show();
+
+    $("#carousel-show").removeClass("fadeOutRight").addClass("fadeInLeft");
+    $("#carousel-show").delay(100).fadeIn(100);
+
+    $("#card-content-animated").removeClass("fadeOutRight").addClass("fadeInLeft");
+    $("#card-content-animated").delay(100).fadeIn(100);
+
+    $("#results-like-fav").removeClass("fadeOutRight").addClass("fadeInLeft");
+    $("#results-like-fav").delay(100).fadeIn(100);
+
+
+
+
+    $("#backBtn").removeClass("fadeOutLeft").addClass("fadeInLeft");
+    $("#backBtn").delay(100).fadeIn(100);
+
+
+
   });
 
 
   $('#backBtn').click(function() {
-    $("#categories-container").removeClass("fadeOutRight").addClass("fadeInRight");
-    $(".results-container").hide();
-    $("#carousel-show").hide();
-    $("#categories-container").show();
-    $("#backBtn").hide();
+
+    //Fade In
+    $(".categories-container").removeClass("fadeOutRight").addClass("fadeInLeft");
+    $(".categories-container").delay(100).fadeIn(100);
+
+    //Fade Out
+    $(".results-container").removeClass("fadeInLeft").addClass("fadeOutRight");
+    $(".results-container").delay(100).fadeOut(100);
+
+    $("#carousel-show").removeClass("fadeInLeft").addClass("fadeOutRight");
+    $("#carousel-show").delay(100).fadeOut(100);
+
+    $("#card-content-animated").removeClass("fadeInLeft").addClass("fadeOutRight");
+    $("#card-content-animated").delay(100).fadeOut(100);
+
+    $("#results-like-fav").removeClass("fadeInLeft").addClass("fadeOutRight");
+    $("#results-like-fav").delay(100).fadeOut(100);
+
+
+    $("#backBtn").removeClass("fadeInLeft").addClass("fadeOutLeft");
+    $("#backBtn").delay(100).fadeOut(100);
+
 
   });
 
