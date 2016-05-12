@@ -20,7 +20,7 @@ $( document ).ready(function() {
         var sixthThree = redditHot.slice(20,23);
         var lastThree = redditHot.slice(24,25);
 
-        var redditCollection = [secondThree, thirdThree, fourthThree, fifthThree, sixthThree];
+        var redditCollection = [secondThree, thirdThree, fourthThree, fifthThree, sixthThree, lastThree];
 
 
         var loopReddit = function(article) {
@@ -47,7 +47,7 @@ $( document ).ready(function() {
 
         var indexRed = 0
         $('#category-next').on('click', function() {
-          if (indexRed < 5 && $('#category').html() === 'Reddit') {
+          if (indexRed < 6 && $('#category').html() === 'Reddit') {
             $('.titleReddit').remove();
             $('.linkReddit').remove();
 
