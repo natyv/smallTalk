@@ -10,12 +10,13 @@
 
 <!--  Navigations -->
 <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper deep-orange accent-3">
       <a href="#!" class="brand-logo center">SmallTalk</a>
 
       <!-- If user is logged in, show the user email and logout button -->
-      <button data-target="modal1" class="btn modal-trigger modal-fixed-nav"><i class="fa fa-user" aria-hidden="true"></i></button>
-      <a id="backBtn" class="waves-effect waves-light btn"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+
+      <button data-target="modal1" class="btn modal-trigger modal-fixed-nav blue accent-4"><i class="fa fa-user" aria-hidden="true"></i></button>
+      <a id="backBtn" class="waves-effect waves-light btn blue accent-4"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
 
 
     </div>
@@ -31,7 +32,7 @@
 <!-- Modal Structure -->
 
 
-<div id="modal1" class="modal bottom-sheet modal-position" style="top: -100%; overflow: hidden;">
+<div id="modal1" class="modal bottom-sheet modal-position" style="top: -100%; overflow: hidden;     min-height: 330px;">
   <div class="modal-content">
     <div class="row">
 
@@ -56,12 +57,12 @@
         <form action="/signin" method = "post">
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
-          <div class="input-field col s12">
+          <div class="input-field col s12 l4 offset-l4">
             <i class="material-icons prefix">account_circle</i>
             <input id="icon_prefix" type="text" class="validate email" name ='email'>
             <label for="icon_prefix">Email</label>
           </div>
-          <div class="input-field col s12">
+          <div class="input-field col s12  l4 offset-l4">
             <i class="material-icons prefix">vpn_key</i>
             <input id="icon_telephone" type="password" class="validate password" name='password'>
             <label for="icon_telephone">Password</label>
@@ -89,9 +90,9 @@
       <% end %>
   </div>
   </div>
-  <div class="modal-footer">
+  <!-- <div class="modal-footer">
     <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="fa fa-times" aria-hidden="true"></i></a>
-  </div>
+  </div> -->
 </div>
 
 
@@ -123,7 +124,7 @@
 
   <!-- Categories Container 1st Row -->
   <div class="row categories">
-    <div class="col s4 m4 l4 center-align categories-click cats"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-cats"></a></div>
+    <div class="col s4 m4 l4 center-align categories-click cats"  ><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-cats"></a></div>
     <div class="col s4 m4 l4 center-align categories-click news"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-news"></a></div>
     <div class="col s4 m4 l4 center-align categories-click numberFacts"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-numberFacts"></a></div>
 
@@ -191,10 +192,10 @@
  <div id="results-like-fav">
   <div class="row">
     <% if !session[:user].nil? %>
-    <div class="col s6  m3 offset-m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable red results-btn" id="like"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
-    <div class="col s6 m3 center-align"><a id="category-next" class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+    <div class="col s6  m3 offset-m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable deep-orange accent-3 results-btn" id="like"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
+    <div class="col s6 m3 center-align"><a id="category-next" class="btn-floating btn-large waves-effect waves-light hoverable deep-orange accent-3 results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
     <% else %>
-    <div class="col s12 center-align"><a id="category-next" class="btn-floating btn-large waves-effect waves-light hoverable red results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+    <div class="col s12 center-align"><a id="category-next" class="btn-floating btn-large waves-effect waves-light hoverable deep-orange accent-3 results-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
     <% end %>
   </div>
 </div>
@@ -203,18 +204,18 @@
  <div class="owl-carousel center-align owl-fixed" id="carousel-show" style="display:none;">
 
 
-     <div class="col s4 m4 l4 center-align categories-click cats"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-cats"></a></div>
-     <div class="col s4 m4 l4 center-align categories-click news"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-news"></a></div>
-     <div class="col s4 m4 l4 center-align categories-click numberFacts"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-numberFacts"></a></div>
+     <div class="col s4 m4 l4 center-align categories-click cats"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-cats"><p class="carousel-text">Cats</p></a></div>
+     <div class="col s4 m4 l4 center-align categories-click news"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-news"><p class="carousel-text">News</p></a></div>
+     <div class="col s4 m4 l4 center-align categories-click numberFacts"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-numberFacts"><p class="carousel-text">NumberFacts</p></a></div>
 
-     <div class="col s4 m4 l4 center-align categories-click randomFacts"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-randomFacts"></a></div>
-     <div class="col s4 m4 l4 center-align categories-click trivia"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-trivia"></a></div>
-     <div class="col s4 m4 l4 center-align categories-click giphy"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red categories-image-giphy"></a></div>
+     <div class="col s4 m4 l4 center-align categories-click randomFacts"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-randomFacts"><p class="carousel-text">RandomFacts</p></a></div>
+     <div class="col s4 m4 l4 center-align categories-click trivia"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-trivia"><p class="carousel-text">Trivia</p></a></div>
+     <div class="col s4 m4 l4 center-align categories-click giphy"><a class="btn-floating btn-large waves-effect waves-light hoverable categories-image red categories-image-btn categories-image-giphy"><p class="carousel-text">Giphy</p></a></div>
 
 
-     <div class="col s4 m4 l4 center-align categories-click smalltalks"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-smalltalks"></a></div>
-     <div class="col s4 m4 l4 center-align categories-click reddit"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-reddit"></a></div>
-     <div class="col s4 m4 l4 center-align categories-click yesno"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-yesno"></a></div>
+     <div class="col s4 m4 l4 center-align categories-click smalltalks"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-smalltalks"><p class="carousel-text">SmallTalk</p></a></div>
+     <div class="col s4 m4 l4 center-align categories-click reddit"><a class="btn-floating btn-large waves-effect waves-light hoverable red  categories-image-btn categories-image-reddit"><p class="carousel-text">Reddit</p></a></div>
+     <div class="col s4 m4 l4 center-align categories-click yesno"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-yesno"><p class="carousel-text">YesNo</p></a></div>
 
  </div>
 
@@ -229,7 +230,7 @@
       responsiveClass:true,
       responsive:{
           0:{
-              items:5,
+              items:3,
               nav:false,
               loop:true
           },
