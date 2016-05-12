@@ -16,7 +16,7 @@
       <!-- If user is logged in, show the user email and logout button -->
 
       <button data-target="modal1" class="btn modal-trigger modal-fixed-nav blue accent-4"><i class="fa fa-user" aria-hidden="true"></i></button>
-      <a id="backBtn" class="waves-effect waves-light btn blue accent-4"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <a id="backBtn" class="waves-effect waves-light btn blue accent-4 animated fadeInLeft" style="display: none;"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
 
 
     </div>
@@ -39,13 +39,18 @@
 
       <!-- if logged in - SHOW -->
       <% if !session[:user].nil? %>
-      <button class="nav-signout">
-        <div>Signed in as... <%= session[:user]["email"] %></div>
+      <ul>
+        <li><button class="nav-signout"></li>
+
+        <li><p class="center-align">Signed in as: <span style="font-weight: bold;"> <%= session[:user]["email"] %></span></p></li>
         <p style="display:none" id="user_id"><%=session[:user]["id"]%></p>
         <form action="/signout" method ="post">
           <input type="hidden" value="delete" name="_method">
-          <button id="logout" style="float:right">Logout</button>
-          <a href="/favourites"><button id="show-favourites" >Favourites</button></a>
+            <!-- <button id="logout">Logout</button></li> -->
+            <a id="logout" class="waves-effect waves-light btn blue accent-4 s6 col offset-s3"><p><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</p></a>
+            <a href="/favourites" id="show-favourites" class="waves-effect waves-light btn blue accent-4 s6 col offset-s3"><p><i class="fa fa-heart" aria-hidden="true"> </i>Favourites</p></a>
+
+
         </form>
       <button>
       <% else %>
@@ -161,8 +166,8 @@
   <!-- Results Container -->
 <div class="results-container" style="display:none;">
   <div class="row results">
-    <p class="center-align results-title-cats" id="category"> </p>
-      <div class="row">
+    <p class="center-align results-title-cats animated fadeInLeft" id="category"> </p>
+      <div class="row animated fadeInLeft">
         <div class="col s12 offset-m2 m8 offset-l3 l6 ">
           <div class="card">
             <div class="card-content">
@@ -189,7 +194,7 @@
 
 
    <!-- Results Container Like + Next Navigation -->
- <div id="results-like-fav">
+ <div id="results-like-fav" class="animated fadeInLeft">
   <div class="row">
     <% if !session[:user].nil? %>
     <div class="col s6  m3 offset-m3 center-align"><a class="btn-floating btn-large waves-effect waves-light hoverable deep-orange accent-3 results-btn" id="like"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
@@ -201,7 +206,7 @@
 </div>
 </div>
 
- <div class="owl-carousel center-align owl-fixed" id="carousel-show" style="display:none;">
+ <div class="owl-carousel center-align owl-fixed animated fadeInLeft" id="carousel-show" style="display:none;">
 
 
      <div class="col s4 m4 l4 center-align categories-click cats"><a class="btn-floating btn-large waves-effect waves-light hoverable red categories-image-btn categories-image-cats"><p class="carousel-text">Cats</p></a></div>
@@ -230,7 +235,7 @@
       responsiveClass:true,
       responsive:{
           0:{
-              items:3,
+              items:4,
               nav:false,
               loop:true
           },
@@ -270,6 +275,7 @@
   });
   $(".categories-click").click(function(){
     $(".results-container").show();
+    $("#backBtn").show();
   });
   $(".categories-click").click(function(){
     $("#carousel-show").show();
@@ -279,6 +285,7 @@
     $(".results-container").hide();
     $("#carousel-show").hide();
     $("#categories-container").show();
+    $("#backBtn").hide();
 
   });
 </script>

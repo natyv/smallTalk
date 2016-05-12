@@ -13,8 +13,10 @@
 
  *= require materialize
  *= require owl.carousel
+
  *= require sessions
  *= require style
  *= require_self
+  *= require animate
 
  */
