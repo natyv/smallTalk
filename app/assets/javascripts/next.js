@@ -95,7 +95,7 @@ $( document ).ready(function() {
         $('#showContent').empty();
 
         $.ajax({
-          url: 'http://localhost:3000/api/smalltalks',
+          url: '/api/smalltalks',
           dataType: "json",
           method: 'GET'
 
