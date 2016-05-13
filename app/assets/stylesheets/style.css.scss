@@ -1,8 +1,40 @@
 
+.background-body{
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  z-index: -3333333;
+  position: fixed;
+  background-image: url("./foreducationalpurposes.png");
+
+}
+
+// body{
+//   background: rgba(227, 242, 253, .9);
+//   background-image: url("http://stylegerms.com/wp-content/uploads/2013/06/pattern-family-01-single1.jpg");
+//   background-position: center;
+//   background-repeat: repeat-y;
+//   background-size: cover;
+//   z-index: -3333333;
+// }
+
+//
+//
+// body {
+//   -khtml-opacity:.50;
+//  -moz-opacity:.50;
+//  -ms-filter:"alpha(opacity=50)";
+//   filter:alpha(opacity=50);
+//   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+//   opacity:.50;
+//
+// }
+
 
 .categories-text-smalltalk{
   font-size: 18px;
   font-weight: 900;
+
 }
 
 #logout{
@@ -45,6 +77,10 @@ nav{
   max-width: 100%;
   display: block;
   margin: 0 auto;
+}
+
+.owl-stage-outer{
+    margin-bottom: 5px;
 }
 
 .owl-prev{
