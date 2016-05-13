@@ -35,13 +35,13 @@
   <% elsif fav.category =="Giphy" || fav.category == "Yes/No" %>
         <div class="card">
           <div id='favouriteCard' class="card-content">
-            <img class="gifImage" src="<%= fav.content %>" >
+            <img class="fav-btn-p gifImage" src="<%= fav.content %>" >
             <form action="/favourites/<%= fav.id%>" method="post">
               <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
               <input type="hidden" value="delete" name="_method">
                 <div class="fav-btn-div">
                   <button class="delete waves-effect waves-light btn red accent-4 fav-btn-delete"><i class="material-icons">delete</i></button>
-
+                </div>
             </form>
           </div>
         </div>
