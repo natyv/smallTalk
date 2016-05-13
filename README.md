@@ -20,6 +20,9 @@ ___
 5. Ajax
 6. CSS3 (together with Materialize framework)
 7. HTML5
+8. SCSS
+9. Owl.js
+10. Animate.css
 
 ## Key Features
 ___
@@ -31,14 +34,12 @@ ___
 ## Links
 ___
 
-
-
-
+Heroku: http://smallchats.herokuapp.com/
 
 ## Challenges
 ___
 
-The first challenge we faced was figuring out the APIs that we wanted to use. We initially wanted to use the twitter api, but that turned out to be quite a difficult task. We ended up changing the categories and using something else. The Materialize framework also threw up quite a few errors initially. But I feel, the biggest challenge was Github! The conflict resolution with merging code was quite time consuming, till we got the hang of it. 
+The first challenge we faced was figuring out the APIs that we wanted to use. We initially wanted to use the twitter api, but that turned out to be quite a difficult task. We ended up changing the categories and using something else. The Materialize framework also threw up quite a few errors initially. But I feel, the biggest challenge was Github! The conflict resolution with merging code was quite time consuming, till we got the hang of it. Another challenge was getting animations working across different browsers because of CSS compatibility.
 
 ## CRUD Operations
 ___
@@ -61,8 +62,7 @@ ___
 ## Wisdom
 ___
 
-
-
+With more time, we would have had added more categories. We would also have added social media functionality.
 
 
 
