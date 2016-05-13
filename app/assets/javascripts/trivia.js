@@ -12,9 +12,10 @@ $( document ).ready(function() {
       $('#showContent').empty();
       $('#showContent').html(response[0].question);
 
-      var $contentPara = $('<p>');
+      var $contentPara = $('<p>').addClass("trivia-p").css("padding-top","10px");
 
-      var $button = $('<button>Reveal Answer</button>').attr('id','answerBtn').addClass("btn waves-light orange");
+
+      var $button = $('<button>Reveal Answer</button>').attr('id','answerBtn').addClass("btn waves-light orange trivia-btn");
 
       var $ansContent = $('<p>').attr('id','answerPara')
 
