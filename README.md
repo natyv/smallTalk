@@ -49,8 +49,11 @@ ___
 * Creating Favourites (Liking/Saving a post)
 
 ### Read
-* Users can view theie Favourites
+* Users can view their Favourites
 * Usera can click on different categories and view content
+
+### Update
+* Users can update their password
 
 ### Delete
 * Users can delete their favourited content

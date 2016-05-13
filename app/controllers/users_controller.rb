@@ -11,14 +11,27 @@ class UsersController < ApplicationController
     @user = User.new
     @user.email = params[:email]
     @user.password = params[:password]
-
-    if @user.save
-      session[:user] = @user
-      redirect_to '/'
-
-    else
+    if User.exists?(email: params[:email])
       render :new
+    else
+      if @user.save
+        session[:user] = @user
+        redirect_to '/'
+      else
+        render :new
+      end
     end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.password = params[:user][:password]
+    @user.save
+    redirect_to '/'
   end
 
 end
