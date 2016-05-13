@@ -43,7 +43,7 @@
       <% if !session[:user].nil? %>
 
 
-        <p class="center-align">Signed in as: <span style="font-weight: bold;"> <%= session[:user]["email"] %></span>  <a href="#"><i class="fa fa-cog" aria-hidden="true"></a></i></p>
+        <p class="center-align">Signed in as: <span style="font-weight: bold;"> <%= session[:user]["email"] %></span>  <a href="/users/<%=session[:user]["id"]%>/edit"><i class="fa fa-cog" aria-hidden="true"></a></i></p>
         <p style="display:none" id="user_id"><%=session[:user]["id"]%></p>
         <form action="/signout" method ="post">
           <input type="hidden" value="delete" name="_method">
