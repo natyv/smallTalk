@@ -11,13 +11,15 @@ class UsersController < ApplicationController
     @user = User.new
     @user.email = params[:email]
     @user.password = params[:password]
-
-    if @user.save
-      session[:user] = @user
-      redirect_to '/'
-
-    else
+    if User.exists?(email: params[:email])
       render :new
+    else
+      if @user.save
+        session[:user] = @user
+        redirect_to '/'
+      else
+        render :new
+      end
     end
   end
 
