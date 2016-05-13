@@ -1,3 +1,18 @@
+#sign-up-btn{
+  margin: 0 auto;
+  display: block;
+}
+
+
+.fav-btn-delete{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.fav-btn-p{
+    padding-bottom: 50px;
+}
 
 .background-body{
   background-image: url("foreducationalpurposes.png");
@@ -33,7 +48,7 @@
 }
 
 #favouriteContent, #editPassword {
-  margin-top:8em;
+    padding-top: 85px;
 }
 
 #favouriteCard {
