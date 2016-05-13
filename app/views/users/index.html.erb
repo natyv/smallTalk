@@ -23,6 +23,7 @@
     </div>
   </nav>
 
+<div class="background-body"></div>
 
 
 
@@ -42,7 +43,7 @@
       <% if !session[:user].nil? %>
 
 
-        <p class="center-align">Signed in as: <span style="font-weight: bold;"> <%= session[:user]["email"] %></span></p>
+        <p class="center-align">Signed in as: <span style="font-weight: bold;"> <%= session[:user]["email"] %></span>  <a href="#"><i class="fa fa-cog" aria-hidden="true"></a></i></p>
         <p style="display:none" id="user_id"><%=session[:user]["id"]%></p>
         <form action="/signout" method ="post">
           <input type="hidden" value="delete" name="_method">
@@ -224,7 +225,7 @@
  </div>
 
  </div>
-
+<div class="body-background"></div>
 <!-- Custom Scripts -->
 <script>
   $(document).ready(function(){
@@ -239,12 +240,12 @@
               loop:true
           },
           400:{
-              items:4,
+              items:5,
               nav:false,
               loop:true
           },
           600:{
-              items:8,
+              items:7,
               nav:true,
               loop:true
           },
@@ -268,7 +269,13 @@
   // }
   });
   $(".button-collapse").sideNav();
+
+
+
+
   ///// Buttons Categories
+
+
   $(".categories-click").click(function(){
 
     //Fade Out
@@ -324,5 +331,12 @@
 
 
   });
+  // $("#like").click(function(){
+  //    $("fa fa-heart-o").removeClass("fa fa-heart-o").addClass("fa fa-heart");
+  // });
+  // $(".fa fa-heart").click(function(){
+  //    $(".fa fa-heart").removeClass("fa fa-heart").addClass("fa fa-heart-o");
+  // });
+
 
 </script>
