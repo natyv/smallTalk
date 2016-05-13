@@ -57,7 +57,7 @@ $( document ).ready(function() {
 
           var $contentPara = $('<p>');
 
-          var $button = $('<button>Answer</button>').attr('id','answerBtn');
+          var $button = $('<button>Reveal Answer</button>').attr('id','answerBtn').addClass("btn waves-light orange");
 
           var $ansContent = $('<p>').attr('id','answerPara')
 
