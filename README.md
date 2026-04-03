@@ -31,10 +31,7 @@ ___
 * Users can save their favourites after logging in.
 * Users can delete their favourites.
 
-## Links
-___
 
-Heroku: http://smallchats.herokuapp.com/
 
 ## Challenges
 ___
